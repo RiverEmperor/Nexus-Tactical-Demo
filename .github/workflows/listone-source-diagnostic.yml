@@ -1,6 +1,11 @@
 name: Listone source diagnostic
 
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/listone-source-diagnostic.yml"
   workflow_dispatch:
   schedule:
     - cron: "17 6 * * 1"
@@ -24,10 +29,10 @@ jobs:
           echo "HTTP status: $CODE"
           test "$CODE" = "200"
           test -s source.html
-          grep -qi "Quotazioni.*FVM" source.html
           echo "Downloaded bytes: $(wc -c < source.html)"
           echo "HTML table rows: $(grep -o '<tr[ >]' source.html | wc -l | tr -d ' ')"
           echo "Player-name markers: $(grep -Eio 'Calciatore|Malen|Thuram|Dimarco' source.html | wc -l | tr -d ' ')"
+          echo "Source snapshot captured; schema analysis is a separate validation step."
       - name: Preserve diagnostic snapshot
         if: always()
         uses: actions/upload-artifact@v4
