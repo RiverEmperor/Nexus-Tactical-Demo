@@ -45,7 +45,7 @@ def main(src, dst):
         counts[role]+=1
         if not all([r["name"],r["team_id"],r["href"]]):
             raise SystemExit(f"ERRORE: dati identificativi mancanti alla riga {n}")
-        match=re.search(r"/(\\d+)(?:\\?.*)?$", r["href"])
+        match=re.search(r"/(\d+)(?:/|\?.*)?$", r["href"])
         if not match: raise SystemExit(f"ERRORE: ID non trovato per {r['name']}")
         pid=match.group(1)
         if pid in ids: raise SystemExit(f"ERRORE: ID duplicato {pid}")
@@ -60,7 +60,7 @@ def main(src, dst):
     payload={"season":EXPECTED_SEASON,
              "source":"https://www.fantacalcio.it/quotazioni-fantacalcio/2026-27",
              "player_count":len(out),"role_counts":counts,"players":out}
-    Path(dst).write_text(json.dumps(payload,ensure_ascii=False,separators=(",",":"))+"\\n",encoding="utf-8")
+    Path(dst).write_text(json.dumps(payload,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
     print(f"OK: {len(out)} giocatori; ruoli {counts}; ID univoci {len(ids)}; JSON creato")
 
 if __name__=="__main__":
