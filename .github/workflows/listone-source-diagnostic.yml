@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - ".github/workflows/listone-source-diagnostic.yml"
+      - "scripts/parse_listone.py"
   workflow_dispatch:
   schedule:
     - cron: "17 6 * * 1"
@@ -18,6 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Check out parser
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
       - name: Fetch public Fantacalcio page
         shell: bash
         run: |
@@ -30,14 +37,14 @@ jobs:
           test "$CODE" = "200"
           test -s source.html
           echo "Downloaded bytes: $(wc -c < source.html)"
-          echo "HTML table rows: $(grep -o '<tr[ >]' source.html | wc -l | tr -d ' ')"
-          echo "Player-name markers: $(grep -Eio 'Calciatore|Malen|Thuram|Dimarco' source.html | wc -l | tr -d ' ')"
-          echo "Source snapshot captured; schema analysis is a separate validation step."
-      - name: Preserve diagnostic snapshot
-        if: always()
+      - name: Parse and validate official Listone
+        run: python scripts/parse_listone.py source.html listone.json
+      - name: Preserve validated data and source snapshot
         uses: actions/upload-artifact@v4
         with:
-          name: fantacalcio-source-diagnostic
-          path: source.html
-          if-no-files-found: warn
+          name: nexus-listone-validated
+          path: |
+            listone.json
+            source.html
+          if-no-files-found: error
           retention-days: 7
