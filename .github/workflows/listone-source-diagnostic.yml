@@ -1,0 +1,38 @@
+name: Listone source diagnostic
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-official-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch public Fantacalcio page
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL="https://www.fantacalcio.it/quotazioni-fantacalcio/2026-27"
+          CODE="$(curl --location --silent --show-error \
+            --user-agent "NEXUS-Tactical-Listone-Checker/1.0" \
+            --output source.html --write-out '%{http_code}' "$URL")"
+          echo "HTTP status: $CODE"
+          test "$CODE" = "200"
+          test -s source.html
+          grep -qi "Quotazioni.*FVM" source.html
+          echo "Downloaded bytes: $(wc -c < source.html)"
+          echo "HTML table rows: $(grep -o '<tr[ >]' source.html | wc -l | tr -d ' ')"
+          echo "Player-name markers: $(grep -Eio 'Calciatore|Malen|Thuram|Dimarco' source.html | wc -l | tr -d ' ')"
+      - name: Preserve diagnostic snapshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fantacalcio-source-diagnostic
+          path: source.html
+          if-no-files-found: warn
+          retention-days: 7
