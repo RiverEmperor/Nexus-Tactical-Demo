@@ -6,7 +6,11 @@ from pathlib import Path
 if len(sys.argv) != 3:
     raise SystemExit("usage: update_embedded_seed.py nexus-listone.json index.html")
 catalog_path, index_path = map(Path, sys.argv[1:])
-catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+catalog_text = catalog_path.read_text(encoding="utf-8")
+# The upstream converter may leave the two literal characters \\n at EOF.
+if catalog_text.endswith("\\\\n"):
+    catalog_text = catalog_text[:-2]
+catalog = json.loads(catalog_text)
 players = catalog.get("players")
 if catalog.get("season") != "2026/27" or not isinstance(players, list) or len(players) < 500:
     raise SystemExit("ERRORE: catalogo non valido o incompleto")
