@@ -19,7 +19,7 @@ for p in players:
         raise SystemExit("ERRORE: record NEXUS incompleto")
 source = index_path.read_text(encoding="utf-8")
 start_token = "const officialSeed="
-end_token = ";\\nfunction stableListoneId"
+end_token = ";\nfunction stableListoneId"
 start = source.find(start_token)
 end = source.find(end_token, start)
 if start < 0 or end < 0:
