@@ -1,0 +1,32 @@
+name: NEXUS formations DOM probe
+on:
+  push:
+    paths:
+      - ".github/workflows/nexus-formations-dom-probe.yml"
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - run: pip install requests beautifulsoup4
+      - run: |
+          python - <<'PY'
+          import requests
+          from bs4 import BeautifulSoup
+          u="https://www.sosfanta.com/lista-formazioni/probabili-formazioni-serie-a/"
+          s=BeautifulSoup(requests.get(u,headers={"User-Agent":"Mozilla/5.0"},timeout=30).text,"html.parser")
+          art=s.find("article")
+          print("TEAMS",[h.get_text(" ",strip=True) for h in art.find_all("h2")])
+          for h in art.find_all("h3"):
+              name=h.get_text(" ",strip=True)
+              if name not in {"Titolari","Panchina"}: continue
+              sec=h.find_parent("section")
+              print("GROUP",name,"sectionclass",sec.get("class"))
+              print("ULS",[(u.get("class"),len(u.find_all("li",recursive=False)),[x.get_text(" ",strip=True) for x in u.find_all("li",recursive=False)[:3]]) for u in sec.find_all("ul")])
+              for ch in sec.find_all(recursive=False):
+                  print("CHILD",ch.name,ch.get("class"),"li",len(ch.find_all("li")))
+          PY
