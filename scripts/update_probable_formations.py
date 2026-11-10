@@ -108,11 +108,21 @@ def main():
         if len(team["starters"]) != 11 or not team["bench"]:
             raise ValueError(f"Dati incompleti per {name}")
 
+    sorted_teams = dict(sorted(teams.items(), key=lambda item: item[0].casefold()))
+    if output.exists():
+        try:
+            previous = json.loads(output.read_text(encoding="utf-8"))
+            if previous.get("teams") == sorted_teams:
+                print("Feed invariato: le probabili formazioni non sono cambiate.")
+                return
+        except (ValueError, OSError):
+            pass
+
     payload = {
         "updatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source": "SOS Fanta",
         "sourceUrl": SOURCE_URL,
-        "teams": dict(sorted(teams.items(), key=lambda item: item[0].casefold())),
+        "teams": sorted_teams,
     }
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
