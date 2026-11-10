@@ -1,0 +1,73 @@
+name: Listone source diagnostic
+# Re-run PR validation after the Alpha 0.1.20 upload.
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/listone-source-diagnostic.yml"
+      - "scripts/parse_listone.py"
+      - "scripts/convert_listone.py"
+      - "scripts/update_embedded_seed.py"
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  inspect-official-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out parser
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Fetch public Fantacalcio page
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL="https://www.fantacalcio.it/quotazioni-fantacalcio/2026-27"
+          CODE="$(curl --location --silent --show-error \
+            --user-agent "NEXUS-Tactical-Listone-Checker/1.0" \
+            --output source.html --write-out '%{http_code}' "$URL")"
+          echo "HTTP status: $CODE"
+          test "$CODE" = "200"
+          test -s source.html
+          echo "Downloaded bytes: $(wc -c < source.html)"
+      - name: Parse and validate official Listone
+        run: python scripts/parse_listone.py source.html listone.json
+      - name: Convert to NEXUS app schema
+        run: python scripts/convert_listone.py listone.json nexus-listone.json
+      - name: Update embedded seed in an isolated candidate
+        run: python scripts/update_embedded_seed.py nexus-listone.json index.html
+      - name: Commit refreshed Listone to the selected branch
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "Listone invariato: nessun commit necessario."
+          else
+            git commit -m "Aggiorna Listone ufficiale 2026/27"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+      - name: Preserve validated data and source snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: nexus-listone-validated
+          path: |
+            listone.json
+            nexus-listone.json
+            source.html
+            index.html
+          if-no-files-found: error
+          retention-days: 7
