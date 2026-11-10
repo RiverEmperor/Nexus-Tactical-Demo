@@ -306,6 +306,7 @@ function nexusTeamsDrawLineup(lineup,teamName){
  $("nexusTeamsFieldTitle").textContent=teamName.toUpperCase()+" · CAMPO TATTICO";
  $("nexusTeamsFormation").textContent=lineup.formation||"MODULO N/D";
 }
+function nexusTeamsPopulateFixtures(teamId){const fixtureSelect=$("nexusFixtureSelect");fixtureSelect.innerHTML="";nexusTeamsFixtures.filter(f=>Number(f.teams.home.id)===Number(teamId)||Number(f.teams.away.id)===Number(teamId)).forEach(f=>{const o=document.createElement("option");o.value=f.fixture.id;o.textContent=f.teams.home.name+" – "+f.teams.away.name+" · "+nexusTeamsDate(f.fixture.date);fixtureSelect.appendChild(o)});}
 async function nexusTeamsLoadLineup(){
  const teamId=Number($("nexusTeamsSelect").value),fixtureId=Number($("nexusFixtureSelect").value);
  const fixture=nexusTeamsFixtures.find(x=>Number(x.fixture.id)===fixtureId);if(!fixture)return;
@@ -330,8 +331,7 @@ async function nexusTeamsLoad(){
   nexusTeamsData=teams;nexusTeamsFixtures=fixtures;nexusTeamsLastLoad=Date.now();
   const select=$("nexusTeamsSelect");select.innerHTML="";
   teams.sort((a,b)=>a.team.name.localeCompare(b.team.name,"it")).forEach(t=>{const o=document.createElement("option");o.value=t.team.id;o.textContent=t.team.name;select.appendChild(o)});
-  const fixtureSelect=$("nexusFixtureSelect");fixtureSelect.innerHTML="";
-  fixtures.forEach(f=>{const o=document.createElement("option");o.value=f.fixture.id;o.textContent=f.teams.home.name+" – "+f.teams.away.name+" · "+nexusTeamsDate(f.fixture.date);fixtureSelect.appendChild(o)});
+  const fixtureSelect=$("nexusFixtureSelect");nexusTeamsPopulateFixtures(Number(select.value));
   if(!teams.length||!fixtures.length)throw new Error("La fonte non ha restituito squadre o partite per la stagione 2026/27.");
   const chosen=teams[0];select.value=chosen.team.id;
   const first=fixtures.find(f=>Number(f.teams.home.id)===Number(chosen.team.id)||Number(f.teams.away.id)===Number(chosen.team.id))||fixtures[0];fixtureSelect.value=first.fixture.id;
@@ -341,7 +341,7 @@ async function nexusTeamsLoad(){
 }
 $("nexusTeamsConnect").onclick=async()=>{const key=$("nexusTeamsApiKey").value.trim();if(!key){toast("Inserisci la chiave API gratuita");return}localStorage.setItem("nexusApiFootballKey",key);try{await nexusTeamsLoad();toast("Fonte dati collegata")}catch(e){toast("Collegamento non riuscito: verifica la chiave")}};
 $("nexusTeamsRefresh").onclick=async()=>{try{await nexusTeamsLoad();toast("Dati squadre aggiornati")}catch(e){toast("Aggiornamento non riuscito")}};
-$("nexusTeamsSelect").onchange=()=>{const teamId=Number($("nexusTeamsSelect").value);const f=nexusTeamsFixtures.find(x=>Number(x.teams.home.id)===teamId||Number(x.teams.away.id)===teamId);if(f)$("nexusFixtureSelect").value=f.fixture.id;nexusTeamsLoadLineup().catch(e=>console.warn(e))};
+$("nexusTeamsSelect").onchange=()=>{nexusTeamsPopulateFixtures(Number($("nexusTeamsSelect").value));nexusTeamsLoadLineup().catch(e=>console.warn(e))};
 $("nexusFixtureSelect").onchange=()=>nexusTeamsLoadLineup().catch(e=>console.warn(e));
 const savedTeamsKey=nexusTeamsKey();if(savedTeamsKey)$("nexusTeamsApiKey").value=savedTeamsKey;
 setInterval(()=>{if(document.getElementById("teams")?.classList.contains("active")&&nexusTeamsKey()&&nexusTeamsSelectedFixture)nexusTeamsLoadLineup().catch(e=>console.warn("NEXUS lineups refresh:",e))},15*60*1000);
