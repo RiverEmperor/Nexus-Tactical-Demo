@@ -287,6 +287,7 @@ function toast(t){$('toast').textContent=t;$('toast').style.display="block";clea
 function fmt(n){return Number(n||0).toLocaleString("it-IT",{minimumFractionDigits:1,maximumFractionDigits:1})}
 
 /* NEXUS SQUADRE — probabili formazioni settimanali SOS Fanta */
+localStorage.removeItem("nexusApiFootballKey");
 let nexusTeamsData=null,nexusTeamsLastLoad=0;
 function nexusTeamsSetStatus(msg){const el=$("nexusTeamsStatus");if(el)el.textContent=msg}
 function nexusTeamsDrawLineup(teamName,team){
