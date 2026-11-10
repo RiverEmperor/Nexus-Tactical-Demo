@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f4f6f8"><title>NEXUS TACTICAL — Alpha 0.1.12</title><!-- Alpha 0.1.11: giudizi di mercato espliciti per segno e intensità -->
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f4f6f8"><title>NEXUS TACTICAL — Alpha 0.1.24 SAFE MIGRATION</title><!-- Alpha 0.1.11: giudizi di mercato espliciti per segno e intensità -->
 <style>
 :root{--bg:#f3f5f8;--surface:#fff;--surface2:#f7f9fb;--ink:#17212b;--muted:#788593;--line:#e2e7ed;--navy:#102a43;--blue:#1769aa;--blue2:#e8f3fc;--teal:#18b7a3;--green:#16845b;--red:#d94a56;--yellow:#c68b16;--shadow:0 8px 24px #15283b0b}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;padding-bottom:calc(78px + env(safe-area-inset-bottom))}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #62b8f4;outline-offset:2px}.app{max-width:720px;margin:auto;min-height:100vh}.top{background:var(--navy);color:#fff;padding:calc(14px + env(safe-area-inset-top)) 18px 18px;border-radius:0 0 22px 22px}.topline{display:flex;align-items:center;justify-content:space-between}.brand{font-weight:850;font-size:18px;letter-spacing:.04em}.brand em{font-style:normal;color:#6fe5d4}.season{font-size:11px;color:#b9c9d8;background:#ffffff14;border:1px solid #ffffff1b;padding:6px 9px;border-radius:20px}.greeting{margin:23px 0 14px}.eyebrow{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:750}.top .eyebrow{color:#a9c0d3}.greeting h1{font-size:25px;line-height:1.12;margin:5px 0 7px;letter-spacing:-.04em}.greeting p{margin:0;color:#c1cfdb;font-size:13px}.weekrow{display:flex;gap:8px;align-items:center;margin-top:18px}.weekrow label{font-size:12px;color:#d2e0eb}.weekrow select{flex:1;min-width:0;background:#193b58;border:1px solid #31526d;border-radius:10px;color:white;padding:10px}.content{padding:16px 14px 20px}.screen{display:none}.screen.active{display:block}.section-title{display:flex;justify-content:space-between;align-items:center;margin:4px 2px 12px}.section-title h2{font-size:18px;margin:0;letter-spacing:-.025em}.subtle{color:var(--muted);font-size:12px}.card{background:var(--surface);border:1px solid var(--line);border-radius:17px;padding:15px;margin-bottom:12px;box-shadow:var(--shadow)}.hero-card{background:linear-gradient(125deg,#123653,#1769aa);color:white;border:0;padding:17px}.hero-card .eyebrow{color:#b4d7ee}.hero-card h2{font-size:20px;margin:6px 0}.hero-card p{color:#d2e4f0;margin:0 0 14px}.btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:11px;padding:11px 13px;font-weight:700}.btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}.btn.light{background:#ffffff16;border-color:#ffffff3a;color:#fff}.btn.full{width:100%}.btn.small{padding:8px 10px;font-size:12px}.actions{display:flex;gap:8px;flex-wrap:wrap}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.statbox{background:var(--surface2);border:1px solid var(--line);border-radius:13px;padding:12px}.statbox .value{font-size:23px;font-weight:850;letter-spacing:-.04em}.statbox .label{color:var(--muted);font-size:11px}.feature-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.feature-row:last-child{border:0;padding-bottom:0}.feature-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:var(--blue2);font-size:20px}.feature-row strong{display:block}.feature-row small{color:var(--muted)}.feature-row button{margin-left:auto}.tabs{position:fixed;z-index:20;bottom:0;left:0;right:0;display:flex;justify-content:center;background:#ffffffed;backdrop-filter:blur(16px);border-top:1px solid var(--line);padding:8px 4px calc(8px + env(safe-area-inset-bottom));}.tabs-inner{display:flex;max-width:720px;width:100%;justify-content:space-around}.navbtn{flex:1;border:0;background:transparent;color:#7b8793;display:flex;flex-direction:column;align-items:center;gap:3px;padding:5px 2px;font-size:10px;font-weight:650}.navbtn .ico{font-size:21px;line-height:1.1}.navbtn.active{color:var(--blue)}.navbtn.active .ico{filter:drop-shadow(0 2px 4px #1769aa25)}.field-card{background:#0b2030;border:1px solid #17465a;border-radius:18px;padding:12px;color:#eaf9ff;overflow:hidden}.field-head{display:flex;align-items:center;justify-content:space-between;margin:0 2px 10px}.field-head strong{font-size:13px;letter-spacing:.04em}.field-head select{background:#16384b;border:1px solid #2b5669;color:#fff;border-radius:9px;padding:7px;max-width:145px}.pitch{position:relative;aspect-ratio:.83;max-height:580px;margin:auto;overflow:hidden;border-radius:13px;background:radial-gradient(ellipse at 50% 45%,#164f57,#0c3442 58%,#082331);border:1px solid #44d9c6;box-shadow:inset 0 0 36px #2de0c91c}.pitch svg{position:absolute;inset:0;width:100%;height:100%;opacity:.8}.pitch-lines{fill:none;stroke:#6ae5d5;stroke-width:1.4}.pitch-lines .faint{opacity:.38}.pitch-player{position:absolute;transform:translate(-50%,-50%);width:66px;text-align:center;border:0;background:transparent;color:#d5fffa;padding:0;z-index:2}.shirt{margin:auto;width:34px;height:32px;border-radius:10px 10px 5px 5px;background:linear-gradient(90deg,#149b99,#83f7e9 50%,#168d95);border:1px solid #b0fff7;box-shadow:0 0 16px #2ce8d36e;position:relative}.shirt:before{content:"";position:absolute;width:15px;height:15px;border-radius:50%;background:#dcfffb;border:1px solid #fff;top:-19px;left:8px;box-shadow:0 0 8px #7ffff0}.shirt:after{content:"";position:absolute;left:5px;right:5px;top:10px;height:1px;background:#e3fffb;box-shadow:0 5px #e3fffb}.base{width:44px;height:10px;border:1px solid #63f8e4;border-radius:50%;margin:-1px auto 0;box-shadow:0 0 12px #39e8d5;background:#42dcca30}.pitch-player b{display:block;font-size:10px;line-height:1.15;margin-top:5px;text-shadow:0 1px 6px #000}.pitch-player small{display:block;font-size:9px;color:#9be7df;margin-top:2px}.pitch-player.selected .shirt{background:linear-gradient(90deg,#ffc45b,#fff0b2,#ffb43d);border-color:#fff1bd;box-shadow:0 0 20px #ffce6a}.pitch-player.selected .base{border-color:#ffdc89;box-shadow:0 0 14px #ffc45b}.field-help{text-align:center;color:#a7cbd0;font-size:11px;padding:10px 0 2px}.quicktools{display:flex;gap:7px;overflow:auto;padding:3px 0 10px}.chip{white-space:nowrap;border:1px solid var(--line);border-radius:20px;padding:8px 12px;background:white;color:#536170;font-size:12px;font-weight:700}.chip.active{background:var(--blue2);border-color:#a9d1f2;color:var(--blue)}.formrow{display:grid;grid-template-columns:1fr 1fr;gap:8px}.formrow label,.fieldlabel{display:block;color:var(--muted);font-size:11px;font-weight:700;margin-bottom:6px}.formrow select,.formrow input,.fieldlabel input,.search{width:100%;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);padding:11px}.roster{display:grid;gap:8px}.playerrow{display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--line);border-radius:13px;background:white}.role{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:#e9f3fb;color:var(--blue);font-size:11px;font-weight:850}.pinfo{min-width:0;flex:1}.pinfo strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px}.pinfo small{color:var(--muted);font-size:11px}.rating-pill{border-radius:8px;background:#e7f7f0;color:var(--green);font-weight:850;padding:6px 8px}.rating-pill.mid{background:#fff5dc;color:var(--yellow)}.rating-pill.low{background:#ffeaeb;color:var(--red)}.iconbtn{border:1px solid var(--line);background:#fff;border-radius:9px;width:34px;height:34px;color:#566675;font-weight:800}.rating-card{padding:13px;border:1px solid var(--line);border-radius:14px;margin-top:10px}.ratingline{display:flex;justify-content:space-between;align-items:center;gap:8px}.ratingline b{font-size:20px;color:var(--blue)}input[type=range]{width:100%;accent-color:var(--blue);margin:14px 0 6px}.rangeends{display:flex;justify-content:space-between;color:var(--muted);font-size:10px}.bar{height:6px;background:#edf0f3;border-radius:10px;overflow:hidden;margin-top:9px}.bar span{display:block;height:100%;border-radius:10px;background:var(--blue)}.note{font-size:12px;color:var(--muted);line-height:1.5}.empty{padding:18px;text-align:center;color:var(--muted)}.bottomspace{height:8px}.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);z-index:40;background:#142b3f;color:#fff;border-radius:12px;padding:11px 15px;box-shadow:0 8px 25px #0002;max-width:90%;display:none}.modal{position:fixed;inset:0;background:#0716269c;z-index:50;display:none;align-items:flex-end;justify-content:center;padding:12px}.modal.open{display:flex}.sheet{background:white;width:min(100%,600px);border-radius:22px 22px 16px 16px;padding:18px;max-height:85vh;overflow:auto}.sheettop{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.sheet h3{margin:0;font-size:18px}.sheet input,.sheet select{width:100%;padding:12px;border:1px solid var(--line);border-radius:11px;margin:7px 0 12px}.sheetactions{display:flex;gap:8px}.sheetactions>*{flex:1}.badge{font-size:10px;font-weight:800;padding:5px 8px;border-radius:20px;background:#e7f7f0;color:var(--green)}@media(min-width:650px){.content{padding:22px}.top{border-radius:0 0 24px 24px}.pitch{max-height:570px}.roster.two{grid-template-columns:1fr 1fr}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
@@ -124,7 +124,7 @@ body{background:radial-gradient(ellipse at 50% -15%,#542477 0,#210d38 34%,#10071
 @media(min-width:650px){.app{max-width:520px;border-left:1px solid #39204e;border-right:1px solid #39204e}.content{padding:13px 14px 24px}.top{border-radius:0}.home-stat-grid,.tool-grid{gap:10px}}
 </style>
 
-</head><body>
+<meta name="nexus-build" content="0.1.24-safe-migration"></head><body>
 <div id="authGate" role="dialog" aria-modal="true" aria-labelledby="authTitle">
  <section class="auth-panel" aria-live="polite">
   <div class="auth-emblem" aria-hidden="true">N<span>✦</span></div>
@@ -175,7 +175,7 @@ body{background:radial-gradient(ellipse at 50% -15%,#542477 0,#210d38 34%,#10071
   <div class="listone-columns"><span>CALCIATORE</span><span>QUOTA</span><span>FVM</span><span></span></div>
   <div id="listoneResults" class="listone-results"></div>
  </div>
- <p class="listone-footnote">Le quotazioni mostrate dipendono dai dati caricati. Importa il CSV ufficiale per aggiornare l'archivio completo sul dispositivo.</p>
+ <p class="listone-footnote">Aggiornamento controllato: importa il CSV ufficiale, verifica le differenze e conserva valutazioni, rose e formazioni.</p>
 <div class="card" id="nexusBackupCard" style="margin-top:14px">
  <div class="eyebrow">DATA & SICUREZZA</div><h3 style="margin:5px 0 8px">Backup NEXUS</h3>
  <p class="note">Esporta o ripristina rose, valutazioni, formazioni e Listone salvati su questo dispositivo. Il backup è locale: non attiva ancora la sincronizzazione online.</p>
@@ -201,7 +201,7 @@ const gate=document.getElementById('authGate'),app=document.getElementById('nexu
 let authReady=false;
 // Auth gate lives outside the app shell so the app's locked visibility cannot hide login.
 function showAuth(message=''){gate.hidden=false;app.classList.add('auth-locked');status.textContent=message;document.getElementById('authChoice').hidden=false;form.hidden=true;document.getElementById('authTitle').textContent='IL TUO SPAZIO TATTICO';document.getElementById('authIntro').textContent='Accedi al tuo account per continuare. Se è la prima volta, crea il tuo account personale.';}
-function showApp(userEmail=''){window.__nexusUserEmail=String(userEmail||'').toLowerCase();window.__nexusSupabase=client;gate.hidden=true;app.classList.remove('auth-locked');window.dispatchEvent(new CustomEvent('nexus-auth-ready',{detail:{email:window.__nexusUserEmail}}));}
+function showApp(userEmail=''){window.__nexusUserEmail=String(userEmail||'').toLowerCase();window.__nexusSupabase=client;if(typeof nexusSelectAccountStorage==='function'&&client.auth.getUser){client.auth.getUser().then(({data})=>{if(data?.user?.id)nexusSelectAccountStorage(data.user.id);}).catch(console.error);}gate.hidden=true;app.classList.remove('auth-locked');window.dispatchEvent(new CustomEvent('nexus-auth-ready',{detail:{email:window.__nexusUserEmail}}));}
 function permitted(user){return !!user && ALLOWED.has(String(user.email||'').toLowerCase());}
 function openAuthForm(mode){status.textContent='';document.getElementById('authChoice').hidden=true;form.hidden=false;const signup=mode==='signup';document.getElementById('authTitle').textContent=signup?'CREA IL TUO ACCOUNT':'BENTORNATO';document.getElementById('authIntro').textContent=signup?'Inserisci la tua email autorizzata e scegli una password personale.':'Inserisci email e password che hai già registrato.';login.textContent=signup?'CREA ACCOUNT':'ACCEDI';document.getElementById('nexusPassword').autocomplete=signup?'new-password':'current-password';form.dataset.mode=mode;}
 document.getElementById('authGoLogin').addEventListener('click',()=>openAuthForm('login'));
@@ -218,7 +218,27 @@ const {data:{session},error}=await client.auth.getSession();authReady=true;if(er
 const initialPlayers=[["Portiere demo","P"],["Difensore demo 01","D"],["Difensore demo 02","D"],["Regista demo","C"],["Attaccante demo","A"],["Difensore demo 03","D"],["Difensore demo 04","D"],["Centrocampista demo 02","C"],["Centrocampista demo 03","C"],["Attaccante demo 02","A"],["Attaccante demo 03","A"],["Portiere riserva","P"],["Difensore riserva","D"],["Centrocampista riserva","C"],["Attaccante riserva","A"]];
 const formations={"433":[[50,88],[22,69],[40,73],[60,73],[78,69],[31,51],[50,56],[69,51],[27,29],[50,20],[73,29]],"352":[[50,88],[25,70],[50,73],[75,70],[12,49],[31,52],[50,46],[69,52],[88,49],[38,27],[62,27]],"4231":[[50,88],[22,70],[40,73],[60,73],[78,70],[40,57],[60,57],[25,37],[50,33],[75,37],[50,19]],"442":[[50,88],[22,70],[40,73],[60,73],[78,70],[22,49],[41,49],[59,49],[78,49],[38,27],[62,27]]};
 const $=id=>document.getElementById(id);let players=[],ratings={},assignments={},activeRole="ALL",targetSlot=0,modalAction=null,modalTemp=null;
-const key="nexusTacticalMobile_v1";
+let key="nexusTacticalMobile_v1";
+const legacyKey="nexusTacticalMobile_v1";
+let nexusActiveUserId=null;
+function nexusSelectAccountStorage(userId){
+ const uid=String(userId||"").trim();if(!uid)return;
+ if(nexusActiveUserId===uid)return;
+ const nextKey="nexusTacticalMobile_v1_user_"+uid;
+ const existing=localStorage.getItem(nextKey);
+ if(!existing){
+  // L'archivio storico appartiene a RIVER: non deve mai essere copiato
+  // nell'account di MATTENEXUS o in altri account.
+  const legacy=localStorage.getItem(legacyKey);
+  const legacyOwnerId="db1273b0-192b-4064-84c0-33814b3e13d1";
+  const legacyMigrationMarker="nexusLegacyMigratedToUser";
+  if(uid===legacyOwnerId&&legacy&&!localStorage.getItem(legacyMigrationMarker)){
+   try{JSON.parse(legacy);localStorage.setItem(nextKey,legacy);localStorage.setItem(legacyMigrationMarker,uid);}
+   catch(e){console.warn("NEXUS: archivio locale precedente non valido",e);}
+  }
+ }
+ key=nextKey;nexusActiveUserId=uid;load();
+}
 const ROSTER_LIMITS={P:3,D:8,C:8,A:6};
 function defaults(){players=[];ratings={};assignments={mine:{},partner:{}}}
 function load(){try{let d=JSON.parse(localStorage.getItem(key)||"null");if(d&&Array.isArray(d.players)){players=d.players;ratings=d.ratings||{};assignments=d.assignments||{mine:{},partner:{}};if(Array.isArray(d.listoneData)&&d.listoneData.length)window.__nexusPreviousListone=d.listoneData;
@@ -229,7 +249,8 @@ players.forEach(p=>{if(!ratings[p.id])ratings[p.id]={mine:6.5,partner:6};if(!Arr
 assignments.mine=assignments.mine||{};assignments.partner=assignments.partner||{};
 for(const team of ["mine","partner"]){Object.keys(assignments[team]).forEach(slot=>{if(removed.has(String(assignments[team][slot])))delete assignments[team][slot];});}
 }else defaults()}catch(e){defaults()}}
-function persist(){try{const payload=JSON.stringify({players,ratings,assignments,listoneData:typeof listoneData!=="undefined"?listoneData:null});localStorage.setItem(key,payload);const saved=localStorage.getItem(key);if(saved!==payload)throw new Error("Verifica del salvataggio locale non riuscita");return true}catch(e){console.error("NEXUS: salvataggio locale fallito",e);toast("Spazio di salvataggio non disponibile: esporta un backup e riprova");return false}}
+function nexusBuildState(){return {players,ratings,assignments,listoneData:typeof listoneData!=="undefined"?listoneData:null};}
+function persist(){try{const payload=JSON.stringify(nexusBuildState());localStorage.setItem(key,payload);const saved=localStorage.getItem(key);if(saved!==payload)throw new Error("Verifica del salvataggio locale non riuscita");if(window.__nexusStateSyncReady&&!window.__nexusApplyingRemote)nexusScheduleStateSync();return true}catch(e){console.error("NEXUS: salvataggio locale fallito",e);toast("Spazio di salvataggio non disponibile: esporta un backup e riprova");return false}}
 function toast(t){$('toast').textContent=t;$('toast').style.display="block";clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').style.display="none",2200)}
 function fmt(n){return Number(n||0).toLocaleString("it-IT",{minimumFractionDigits:1,maximumFractionDigits:1})}
 function screen(id){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===id));document.querySelectorAll(".navbtn").forEach(b=>b.classList.toggle("active",b.dataset.screen===id));window.scrollTo({top:0,behavior:"smooth"});if(id==="ratings")renderRatings();if(id==="market")renderMarket();if(id==="listone")renderListone()}
@@ -760,20 +781,122 @@ function renderListone(){
 }
 
 function parseCSV(text){
- const lines=text.replace(/^\uFEFF/,"").split(/\r?\n/).filter(Boolean), sep=(lines[0].match(/;/g)||[]).length>(lines[0].match(/,/g)||[]).length?";":",";
+ const lines=text.replace(/^\uFEFF/,"").split(/\r?\n/).filter(x=>x.trim());
+ if(lines.length<2)throw Error("Il file non contiene righe dati");
+ const sep=(lines[0].match(/;/g)||[]).length>(lines[0].match(/,/g)||[]).length?";":",";
  const parse=line=>{let out=[],v="",inside=false;for(let i=0;i<line.length;i++){let c=line[i];if(c==='"'){if(inside&&line[i+1]==='"'){v+='"';i++}else inside=!inside}else if(c===sep&&!inside){out.push(v.trim());v=""}else v+=c}out.push(v.trim());return out};
- const rows=lines.map(parse), h=rows.shift().map(x=>x.toLowerCase());
+ const rows=lines.map(parse), h=rows.shift().map(x=>x.toLowerCase().trim());
  const ix=(...names)=>h.findIndex(x=>names.some(n=>x===n||x.includes(n)));
- const ni=ix("nome","calciatore","player"), ti=ix("squadra","team","sq"), ri=(h.findIndex(x=>x==="r")>=0?h.findIndex(x=>x==="r"):ix("ruolo")), qi=ix("qt.a","quotazione","qa","quota"), fi=ix("fvm"), mi=(h.findIndex(x=>x==="rm")>=0?h.findIndex(x=>x==="rm"):ix("mantra"));
+ const idI=ix("id","officialid","codice"), ni=ix("nome","calciatore","player"), ti=ix("squadra","team","sq"), ri=h.findIndex(x=>x==="r"||x==="ruolo"), qi=ix("qt.a","quotazione attuale","qa","quota"), q0=ix("qt.i","quotazione iniziale","qi"), fi=ix("fvm"), fmI=ix("fvm m"), mantraI=h.findIndex(x=>x==="rm"||x==="mantra");
  if(ni<0)throw Error("Colonna Nome non trovata");
- const roleMap=v=>{v=(v||"").toUpperCase();return ({P:"P",POR:"P",D:"D",DIF:"D",C:"C",CEN:"C",M:"C",A:"A",ATT:"A"})[v]||"C"};
- return rows.map(r=>({name:r[ni],team:ti>=0?r[ti]:"",role:roleMap(ri>=0?r[ri]:"C"),quote:qi>=0?Number((r[qi]||"").replace(",","."))||null:null,fvm:fi>=0?(Number((r[fi]||"").replace(",","."))||null):null,mantra:mi>=0?r[mi]:""})).filter(p=>p.name);
+ const num=v=>{const n=Number(String(v||"").replace(",",".").replace(/[^\d.-]/g,""));return Number.isFinite(n)?n:null};
+ const roleMap=v=>({P:"P",POR:"P",D:"D",DIF:"D",C:"C",CEN:"C",M:"C",A:"A",ATT:"A"})[String(v||"").toUpperCase().trim()]||null;
+ const out=rows.map(r=>{const role=roleMap(ri>=0?r[ri]:"");if(!r[ni]||!role)return null;const officialId=idI>=0?r[idI]:"";return {officialId:officialId||undefined,name:r[ni],team:ti>=0?r[ti]:"",role,mantra:mantraI>=0?r[mantraI]:"",quote:qi>=0?num(r[qi]):null,quoteInitial:q0>=0?num(r[q0]):null,fvm:fi>=0?num(r[fi]):null,fvmMantra:fmI>=0?num(r[fmI]):null};}).filter(Boolean);
+ if(!out.length)throw Error("Nessun calciatore valido: controlla le colonne Nome, Squadra e R");
+ return out;
 }
+function nexusReconcileListone(imported){
+ const norm=x=>String(x||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]/g,"");
+ const old=listoneData, oldById=new Map(old.filter(x=>x.officialId).map(x=>[String(x.officialId),x])), oldByName=new Map(old.map(x=>[norm(x.name),x]));
+ const next=imported.map(x=>{const prev=(x.officialId&&oldById.get(String(x.officialId)))||oldByName.get(norm(x.name));const id=x.officialId?String(x.officialId):stableListoneId(x);const merged={...(prev||{}),...x,id,officialId:x.officialId||prev?.officialId};if(merged.quoteMantra==null)merged.quoteMantra=merged.quote;if(merged.fvmMantra==null)merged.fvmMantra=merged.fvm;return merged;});
+ const added=next.filter(x=>!old.some(o=>(x.officialId&&String(o.officialId)===String(x.officialId))||norm(o.name)===norm(x.name))).length;
+ const removed=old.filter(x=>!next.some(n=>(x.officialId&&n.officialId&&String(x.officialId)===String(n.officialId))||norm(x.name)===norm(n.name))).length;
+ next.forEach(x=>{const prev=(x.officialId&&oldById.get(String(x.officialId)))||oldByName.get(norm(x.name));if(prev){const prior=ratings[prev.id]||ratings[stableListoneId(prev)];if(prior&&!ratings[x.id])ratings[x.id]={...prior};}});
+ players.forEach(p=>{const found=next.find(x=>(p.officialId&&x.officialId&&String(p.officialId)===String(x.officialId))||norm(x.name)===norm(p.name));if(found){p.listoneId=found.id;p.officialId=found.officialId;p.name=found.name;p.role=found.role;p.team=found.team;p.quote=found.quote;p.fvm=found.fvm;p.mantra=found.mantra;}});
+ return {next,added,removed};
+}
+$("listoneFile").onchange=async e=>{
+ const f=e.target.files&&e.target.files[0];if(!f)return;
+ try{const imported=parseCSV(await f.text());if(imported.length<50)throw Error("Il file contiene meno di 50 calciatori: importazione annullata per sicurezza");const diff=nexusReconcileListone(imported);const ok=confirm(`Anteprima aggiornamento Listone\n\nCalciatori nel file: ${imported.length}\nNuovi ingressi: ${diff.added}\nNon più presenti: ${diff.removed}\n\nValutazioni personali, rose e formazioni verranno conservate. Procedere?`);if(!ok)return;listoneData=diff.next;listoneData.forEach(lp=>{if(!ratings[lp.id])ratings[lp.id]={mine:6.5,partner:6};});if(!persist())throw Error("Salvataggio non riuscito: archivio precedente conservato");renderAll();toast(`Listone aggiornato · ${imported.length} calciatori`);}
+ catch(err){console.error(err);alert("Aggiornamento non eseguito: "+err.message);}
+ finally{e.target.value="";}
+};
+
 $("listoneSearch").oninput=renderListone;$("listoneSort").onchange=renderListone;
 document.querySelectorAll("[data-mode]").forEach(b=>b.onclick=()=>{window.nexusListoneMode=b.dataset.mode;document.querySelectorAll("[data-mode]").forEach(x=>x.classList.toggle("active",x===b));renderListone()});$("listoneSearch").oninput=renderListone;$("listoneSort").onchange=renderListone;
 document.querySelectorAll("[data-lrole]").forEach(b=>b.onclick=()=>{listoneRole=b.dataset.lrole;document.querySelectorAll("[data-lrole]").forEach(x=>x.classList.toggle("active",x===b));renderListone()});
 $("listoneFile").onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let data=parseCSV(await f.text());if(!data.length)throw Error("Nessuna riga valida");listoneData=data.map(x=>({...x,id:stableListoneId(x)}));migrateGlobalRatings();persist();renderListone();renderRatings();toast("Importati "+data.length+" calciatori")}catch(err){alert("Importazione non riuscita: "+err.message+". Esporta il listone ufficiale in formato CSV e riprova.")}e.target.value=""};
 
+
+// CLOUD USER STATE: rose, formazioni e listone personale sono sincronizzati per account.
+let nexusStateChannel=null,nexusStateTimer=null,nexusStateSyncBusy=false,nexusStateDirty=false,nexusStateLastRemoteAt=null;
+window.__nexusStateSyncReady=false;window.__nexusApplyingRemote=false;
+function nexusMergeState(localState,remoteState){
+ const local=localState&&typeof localState==="object"?localState:{},remote=remoteState&&typeof remoteState==="object"?remoteState:{};
+ const byId=new Map();
+ (Array.isArray(remote.players)?remote.players:[]).forEach(p=>{if(p&&p.id!=null)byId.set(String(p.id),p)});
+ (Array.isArray(local.players)?local.players:[]).forEach(p=>{if(p&&p.id!=null)byId.set(String(p.id),{...(byId.get(String(p.id))||{}),...p})});
+ const mergedPlayers=[...byId.values()];
+ const mergedAssignments={mine:{...(remote.assignments&&remote.assignments.mine||{}),...(local.assignments&&local.assignments.mine||{})},partner:{...(remote.assignments&&remote.assignments.partner||{}),...(local.assignments&&local.assignments.partner||{})}};
+ const mergedRatings={...(remote.ratings||{}),...(local.ratings||{})};
+ const localList=Array.isArray(window.__nexusPreviousListone)&&window.__nexusPreviousListone.length&&Array.isArray(local.listoneData)?local.listoneData:[],remoteList=Array.isArray(remote.listoneData)?remote.listoneData:[];
+ const mergedList=localList.length?localList:(remoteList.length?remoteList:(Array.isArray(local.listoneData)?local.listoneData:[]));
+ return {players:mergedPlayers,ratings:mergedRatings,assignments:mergedAssignments,listoneData:mergedList};
+}
+function nexusApplyState(state){
+ if(!state||typeof state!=="object")return;
+ window.__nexusApplyingRemote=true;
+ try{
+  if(Array.isArray(state.players))players=state.players;
+  if(state.ratings&&typeof state.ratings==="object")ratings=state.ratings;
+  if(state.assignments&&typeof state.assignments==="object")assignments={mine:{...(state.assignments.mine||{})},partner:{...(state.assignments.partner||{})}};
+  if(Array.isArray(state.listoneData)&&state.listoneData.length)listoneData=state.listoneData;
+  localStorage.setItem(key,JSON.stringify(nexusBuildState()));
+  renderAll();
+ }finally{window.__nexusApplyingRemote=false;}
+}
+function nexusScheduleStateSync(){
+ if(!window.__nexusStateSyncReady)return;
+ nexusStateDirty=true;
+ if(nexusStateTimer)clearTimeout(nexusStateTimer);
+ nexusStateTimer=setTimeout(()=>nexusPushState(),900);
+}
+async function nexusPushState(){
+ if(!window.__nexusStateSyncReady||nexusStateSyncBusy||!nexusStateDirty)return;
+ const sb=window.__nexusSupabase;
+ const {data:{user},error:userError}=await sb.auth.getUser();
+ if(userError||!user){console.warn("NEXUS state sync: sessione non disponibile; dati conservati localmente");return;}
+ nexusStateSyncBusy=true;
+ const snapshot=nexusBuildState(),payload=JSON.stringify(snapshot);
+ try{
+  const {error}=await sb.from("nexus_user_state").upsert({user_id:user.id,state:snapshot,updated_at:new Date().toISOString()},{onConflict:"user_id"});
+  if(error)throw error;
+  nexusStateDirty=JSON.stringify(nexusBuildState())!==payload;
+  if(!nexusStateDirty)toast("Rosa e formazioni sincronizzate");
+ }catch(e){console.error("NEXUS cloud state save:",e);toast("Modifiche conservate sul dispositivo; sincronizzazione in attesa");}
+ finally{nexusStateSyncBusy=false;if(nexusStateDirty&&window.__nexusStateSyncReady){if(nexusStateTimer)clearTimeout(nexusStateTimer);nexusStateTimer=setTimeout(()=>nexusPushState(),1200);}}
+}
+async function initializeNexusStateSync(){
+ const sb=window.__nexusSupabase;if(!sb)return;
+ window.__nexusStateSyncReady=false;
+ const {data:{user},error:userError}=await sb.auth.getUser();
+ if(userError||!user){toast("Impossibile verificare l’account per sincronizzare rose e formazioni");return;}
+ if(typeof nexusSelectAccountStorage==="function")nexusSelectAccountStorage(user.id);
+ const {data:row,error}=await sb.from("nexus_user_state").select("user_id,state,updated_at").eq("user_id",user.id).maybeSingle();
+ if(error){console.error("NEXUS cloud state load:",error);toast("Dati personali online non caricati: "+error.message);return;}
+ const local=nexusBuildState();
+ if(!row){
+  window.__nexusStateSyncReady=true;nexusStateDirty=true;await nexusPushState();
+ }else{
+  const remote=row.state&&typeof row.state==="object"?row.state:{};
+  const merged=nexusMergeState(local,remote);
+  nexusApplyState(merged);
+  window.__nexusStateSyncReady=true;
+  const localText=JSON.stringify(local),mergedText=JSON.stringify(merged),remoteText=JSON.stringify(remote);
+  if(localText!==remoteText||mergedText!==remoteText){nexusStateDirty=true;await nexusPushState();}
+ }
+ nexusStateLastRemoteAt=row&&row.updated_at||null;
+ if(nexusStateChannel){await sb.removeChannel(nexusStateChannel);nexusStateChannel=null;}
+ nexusStateChannel=sb.channel("nexus-user-state-"+user.id).on("postgres_changes",{event:"*",schema:"public",table:"nexus_user_state",filter:"user_id=eq."+user.id},payload=>{
+  const incoming=payload.new&&payload.new.state;
+  if(!incoming||window.__nexusApplyingRemote)return;
+  if(nexusStateDirty||nexusStateSyncBusy)return;
+  nexusApplyState(incoming);
+  nexusStateLastRemoteAt=payload.new.updated_at||null;
+ }).subscribe(state=>{if(state==="CHANNEL_ERROR"||state==="TIMED_OUT")console.warn("NEXUS state Realtime:",state);});
+ window.addEventListener("online",()=>{if(nexusStateDirty)nexusPushState();});
+}
+window.addEventListener("nexus-auth-ready",()=>{initializeNexusStateSync().catch(e=>{console.error(e);toast("Errore sincronizzazione rose e formazioni")});});
 
 // CLOUD RATINGS: ogni riga è di proprietà dell'utente autenticato; i voti storici locali non vengono caricati automaticamente.
 let nexusRatingChannel=null;const nexusRatingTimers=new Map();let nexusRatingSyncReady=false;
