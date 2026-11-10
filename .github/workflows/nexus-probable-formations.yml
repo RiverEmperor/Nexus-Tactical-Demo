@@ -7,7 +7,6 @@ on:
     paths:
       - "scripts/update_probable_formations.py"
       - ".github/workflows/nexus-probable-formations.yml"
-      - "alpha-test/index.html"
 permissions:
   contents: write
 concurrency:
@@ -39,5 +38,7 @@ jobs:
             echo "Feed invariato: nessun commit necessario."
           else
             git commit -m "Aggiorna probabili formazioni Serie A"
+            git fetch origin main
+            git rebase origin/main
             git push origin "HEAD:main"
           fi
