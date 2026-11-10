@@ -169,7 +169,7 @@ body{background:radial-gradient(ellipse at 50% -15%,#542477 0,#210d38 34%,#10071
   <div class="teams-source-meta"><span>Fonte dati: API-Football</span><span id="nexusTeamsUpdated">Non ancora aggiornato</span></div>
   <div class="teams-api-setup" id="nexusTeamsSetup">
    <label class="fieldlabel" for="nexusTeamsApiKey">Collegamento gratuito alla fonte dati</label>
-   <input id="nexusTeamsApiKey" type="password" autocomplete="off" placeholder="Inserisci la chiave API gratuita">
+   <input id="nexusTeamsApiKey" type="password" autocomplete="off" placeholder="Inserisci la chiave API gratuita"><a class="note" href="https://www.api-football.com/" target="_blank" rel="noopener">Crea gratuitamente la chiave API su API-Football ↗</a>
    <button class="btn primary full" id="nexusTeamsConnect" type="button">COLLEGA E CARICA LE SQUADRE</button>
    <p class="note">La chiave si ottiene gratuitamente su API-Football e resta salvata solo su questo dispositivo. Non viene inviata a NEXUS né condivisa con altri account.</p>
   </div>
@@ -288,7 +288,7 @@ function fmt(n){return Number(n||0).toLocaleString("it-IT",{minimumFractionDigit
 /* NEXUS SQUADRE — feed ufficiale gratuito API-Football */
 const NEXUS_TEAMS_API="https://v3.football.api-sports.io";
 const NEXUS_TEAMS_LEAGUE=135,NEXUS_TEAMS_SEASON=2026;
-let nexusTeamsData=[],nexusTeamsFixtures=[],nexusTeamsSelectedFixture=null;
+let nexusTeamsData=[],nexusTeamsFixtures=[],nexusTeamsSelectedFixture=null,nexusTeamsLastLoad=0;
 function nexusTeamsKey(){return localStorage.getItem("nexusApiFootballKey")||""}
 function nexusTeamsSetStatus(msg){const el=$("nexusTeamsStatus");if(el)el.textContent=msg}
 function nexusTeamsDate(v){if(!v)return "Data da definire";return new Date(v).toLocaleString("it-IT",{weekday:"short",day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"})}
@@ -327,7 +327,7 @@ async function nexusTeamsLoad(){
  $("nexusTeamsSetup").hidden=true;$("nexusTeamsControls").hidden=false;nexusTeamsSetStatus("Caricamento club e prossime partite…");
  try{
   const [teams,fixtures]=await Promise.all([nexusTeamsRequest("/teams?league="+NEXUS_TEAMS_LEAGUE+"&season="+NEXUS_TEAMS_SEASON),nexusTeamsRequest("/fixtures?league="+NEXUS_TEAMS_LEAGUE+"&season="+NEXUS_TEAMS_SEASON+"&next=20")]);
-  nexusTeamsData=teams;nexusTeamsFixtures=fixtures;
+  nexusTeamsData=teams;nexusTeamsFixtures=fixtures;nexusTeamsLastLoad=Date.now();
   const select=$("nexusTeamsSelect");select.innerHTML="";
   teams.sort((a,b)=>a.team.name.localeCompare(b.team.name,"it")).forEach(t=>{const o=document.createElement("option");o.value=t.team.id;o.textContent=t.team.name;select.appendChild(o)});
   const fixtureSelect=$("nexusFixtureSelect");fixtureSelect.innerHTML="";
@@ -344,8 +344,9 @@ $("nexusTeamsRefresh").onclick=async()=>{try{await nexusTeamsLoad();toast("Dati 
 $("nexusTeamsSelect").onchange=()=>{const teamId=Number($("nexusTeamsSelect").value);const f=nexusTeamsFixtures.find(x=>Number(x.teams.home.id)===teamId||Number(x.teams.away.id)===teamId);if(f)$("nexusFixtureSelect").value=f.fixture.id;nexusTeamsLoadLineup().catch(e=>console.warn(e))};
 $("nexusFixtureSelect").onchange=()=>nexusTeamsLoadLineup().catch(e=>console.warn(e));
 const savedTeamsKey=nexusTeamsKey();if(savedTeamsKey)$("nexusTeamsApiKey").value=savedTeamsKey;
+setInterval(()=>{if(document.getElementById("teams")?.classList.contains("active")&&nexusTeamsKey()&&nexusTeamsSelectedFixture)nexusTeamsLoadLineup().catch(e=>console.warn("NEXUS lineups refresh:",e))},15*60*1000);
 
-function screen(id){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===id));document.querySelectorAll(".navbtn").forEach(b=>b.classList.toggle("active",b.dataset.screen===id));window.scrollTo({top:0,behavior:"smooth"});if(id==="ratings")renderRatings();if(id==="market")renderMarket();if(id==="listone")renderListone();if(id==="teams"&&nexusTeamsKey()&&!nexusTeamsData.length)nexusTeamsLoad().catch(e=>console.warn(e))}
+function screen(id){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===id));document.querySelectorAll(".navbtn").forEach(b=>b.classList.toggle("active",b.dataset.screen===id));window.scrollTo({top:0,behavior:"smooth"});if(id==="ratings")renderRatings();if(id==="market")renderMarket();if(id==="listone")renderListone();if(id==="teams"&&nexusTeamsKey()&&(!nexusTeamsData.length||Date.now()-nexusTeamsLastLoad>12*60*60*1000))nexusTeamsLoad().catch(e=>console.warn(e))}
 function currentTeam(){return $("teamSelect").value}
 function teamPlayers(team=currentTeam()){return players.filter(p=>Array.isArray(p.owners)&&p.owners.includes(team))}
 function roleCount(role,team=currentTeam()){return teamPlayers(team).filter(p=>p.role===role).length}
