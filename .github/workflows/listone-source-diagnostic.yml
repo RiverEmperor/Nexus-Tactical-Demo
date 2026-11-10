@@ -11,8 +11,6 @@ on:
       - "scripts/convert_listone.py"
       - "scripts/update_embedded_seed.py"
   workflow_dispatch:
-  schedule:
-    - cron: "17 6 * * *"
 
 permissions:
   contents: write
