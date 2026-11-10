@@ -126,6 +126,16 @@ body{background:radial-gradient(ellipse at 50% -15%,#542477 0,#210d38 34%,#10071
 
 <meta name="nexus-build" content="0.1.24-safe-migration"><style>
 .teams-api-setup{margin-top:12px}.teams-api-setup input,.teams-api-setup select,.nexus-teams-field select{width:100%;padding:11px;border-radius:10px;border:1px solid #654782;background:#241536;color:#fff;margin:6px 0 10px}.teams-api-setup .note{margin:7px 0 0}.nexus-teams-field{margin-top:12px}.nexus-teams-field .pitch{min-height:360px;aspect-ratio:.76}.nexus-teams-empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:#e8d7ff;gap:8px}.nexus-teams-empty div{font-size:42px;filter:drop-shadow(0 0 12px #ad80ff)}.nexus-teams-empty strong{font-size:15px}.nexus-teams-empty span{font-size:11px;color:#c7b2df;max-width:230px}.nexus-team-player{position:absolute;transform:translate(-50%,-50%);width:68px;text-align:center;color:#fff;z-index:3}.nexus-team-player .shirt{width:29px;height:26px;margin:auto;border-radius:8px 8px 5px 5px;background:linear-gradient(120deg,#7542c6,#d6baff 50%,#7040b7);border:1px solid #eadcff;box-shadow:0 0 13px #b88aff99}.nexus-team-player b{display:block;font-size:9px;line-height:1.1;margin-top:5px;padding:3px 4px;border-radius:5px;background:#150d22eF;border:1px solid #ffffff55;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nexus-team-player small{display:block;font-size:8px;color:#ffe6b6;margin-top:2px}.nexus-teams-bench{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:10px}.nexus-bench-player{padding:8px;border:1px solid #50346a;border-radius:9px;background:#241536;font-size:11px}.nexus-bench-player small{display:block;color:#bda8d6;margin-top:2px}.nexus-teams-field .pitch svg{z-index:1}.nexus-teams-field .pitch:before,.nexus-teams-field .pitch:after{pointer-events:none}.nexus-teams-field .field-head .badge{background:#35204f;color:#e1caff;border:1px solid #714b94}
+</style><style>
+.nexus-teams-controls{margin-top:14px}
+.nexus-teams-controls select{width:100%;padding:12px 13px;border-radius:10px;border:1px solid #654782;background:#241536;color:#fff;margin-top:6px}
+.nexus-teams-match-info{margin-top:12px;font-weight:700;color:var(--ink)}
+.nexus-teams-field .pitch{min-height:390px;aspect-ratio:.76}
+.nexus-team-player{width:72px}
+.nexus-team-player .shirt{width:30px;height:27px}
+.nexus-team-player b{font-size:9px}
+.nexus-team-player small{font-size:8px}
+.teams-footnote{margin-top:10px}
 </style></head><body>
 <div id="authGate" role="dialog" aria-modal="true" aria-labelledby="authTitle">
  <section class="auth-panel" aria-live="polite">
@@ -162,33 +172,24 @@ body{background:radial-gradient(ellipse at 50% -15%,#542477 0,#210d38 34%,#10071
 <section class="screen" id="market"><div class="section-title"><h2>Mercato e scambi</h2><span class="subtle">Confronto manager</span></div><div class="card"><p class="note">Confronta due giocatori sulla base dei vostri giudizi. Il suggerimento è indicativo: non usa quotazioni reali o dati statistici esterni.</p><label class="fieldlabel" for="sellSelect">GIOCATORE IN USCITA</label><select id="sellSelect"></select><label class="fieldlabel" for="buySelect">GIOCATORE IN ENTRATA</label><select id="buySelect"></select><div class="grid2" style="margin-top:12px"><div class="statbox"><div class="label">Differenza secondo me</div><div class="value" id="myDelta">0,0</div></div><div class="statbox"><div class="label">Differenza secondo Matte</div><div class="value" id="partnerDelta">0,0</div></div></div><div class="rating-card"><strong id="marketTitle">Confronto</strong><p id="marketAdvice" class="note">Seleziona i giocatori per confrontarli.</p></div><button class="btn primary full" id="updateMarket" style="margin-top:12px">Aggiorna confronto</button></div></section>
 
 <section class="screen" id="teams">
- <div class="section-title"><div><h2>Squadre Serie A</h2><span class="subtle">Stagione 2026/27 · dati in app</span></div><span class="badge">NEXUS LIVE</span></div>
+ <div class="section-title"><div><h2>Formazioni Serie A</h2><span class="subtle">Probabili 2026/27 · aggiornamento settimanale</span></div><span class="badge">NEXUS SCOUT</span></div>
  <div class="card teams-hero">
-  <div class="eyebrow">TACTICAL SCOUTING</div><h3>Formazioni direttamente in NEXUS</h3>
-  <p class="note">Seleziona un club per vedere modulo, undici titolare e panchina sul nostro campo tattico. Le formazioni ufficiali vengono caricate appena pubblicate dalla fonte.</p>
-  <div class="teams-source-meta"><span>Fonte dati: API-Football</span><span id="nexusTeamsUpdated">Non ancora aggiornato</span></div>
-  <div class="teams-api-setup" id="nexusTeamsSetup">
-   <label class="fieldlabel" for="nexusTeamsApiKey">Collegamento gratuito alla fonte dati</label>
-   <input id="nexusTeamsApiKey" type="password" autocomplete="off" placeholder="Inserisci la chiave API gratuita"><a class="note" href="https://www.api-football.com/" target="_blank" rel="noopener">Crea gratuitamente la chiave API su API-Football ↗</a>
-   <button class="btn primary full" id="nexusTeamsConnect" type="button">COLLEGA E CARICA LE SQUADRE</button>
-   <p class="note">La chiave si ottiene gratuitamente su API-Football e resta salvata solo su questo dispositivo. Non viene inviata a NEXUS né condivisa con altri account.</p>
-  </div>
-  <div id="nexusTeamsControls" hidden>
-   <div class="formrow">
-    <div><label class="fieldlabel" for="nexusTeamsSelect">SQUADRA</label><select id="nexusTeamsSelect"></select></div>
-    <div><label class="fieldlabel" for="nexusFixtureSelect">PARTITA</label><select id="nexusFixtureSelect"></select></div>
-   </div>
-   <button class="btn full" id="nexusTeamsRefresh" type="button" style="margin-top:10px">↻ AGGIORNA DATI</button>
+  <div class="eyebrow">TACTICAL SCOUTING</div><h3>Formazioni previste</h3>
+  <p class="note">Consulta titolari e panchina previsti per ogni club, direttamente sul campo tattico NEXUS.</p>
+  <div class="teams-source-meta"><span>Fonte: SOS Fanta</span><span id="nexusTeamsUpdated">Feed in caricamento…</span></div>
+  <div id="nexusTeamsControls" class="nexus-teams-controls">
+   <label class="fieldlabel" for="nexusTeamsSelect">SQUADRA</label>
+   <select id="nexusTeamsSelect" aria-label="Seleziona squadra"></select>
   </div>
  </div>
- <div class="card" id="nexusTeamsMatchInfo" hidden></div>
+ <div class="card nexus-teams-match-info" id="nexusTeamsMatchInfo" hidden></div>
  <div class="field-card nexus-teams-field">
   <div class="field-head"><strong id="nexusTeamsFieldTitle">NEXUS TACTICAL FIELD</strong><span class="badge" id="nexusTeamsFormation">IN ATTESA</span></div>
-  <div class="pitch" id="nexusTeamsPitch"><div class="nexus-teams-empty"><div>⚽</div><strong>Il campo tattico ti aspetta</strong><span>Collega la fonte gratuita per caricare le formazioni direttamente qui.</span></div></div>
-  <div class="field-help" id="nexusTeamsStatus">Le formazioni ufficiali vengono pubblicate normalmente 20–40 minuti prima del calcio d'inizio.</div>
+  <div class="pitch" id="nexusTeamsPitch"><div class="nexus-teams-empty"><div>⚽</div><strong>Il campo tattico ti aspetta</strong><span>Caricamento delle probabili formazioni…</span></div></div>
+  <div class="field-help" id="nexusTeamsStatus">Le previsioni vengono aggiornate automaticamente ogni settimana.</div>
  </div>
- <div class="card" id="nexusTeamsBench" hidden><strong>Panchina</strong><div id="nexusTeamsBenchList" class="nexus-teams-bench"></div></div>
- <p class="note teams-footnote">NEXUS distingue sempre le formazioni ufficiali da quelle non ancora disponibili. Il servizio gratuito fornisce le formazioni confermate, non previsioni editoriali: non mostreremo undici ipotetici come se fossero aggiornamenti verificati.</p>
+ <div class="card" id="nexusTeamsBench" hidden><strong>Panchina prevista</strong><div id="nexusTeamsBenchList" class="nexus-teams-bench"></div></div>
+ <p class="note teams-footnote">Formazioni previsionali, non ufficiali. Le percentuali indicano la probabilità riportata dalla fonte. Ultimo aggiornamento sempre visibile; se una fonte non è disponibile, NEXUS conserva l'ultimo feed valido.</p>
 </section>
 <section class="screen" id="listone">
  <div class="section-title"><div><h2>Listone giocatori</h2><span class="subtle">Quotazioni · ruoli · valori</span></div><span class="badge">26/27</span></div>
@@ -285,68 +286,80 @@ function persist(){try{const payload=JSON.stringify(nexusBuildState());localStor
 function toast(t){$('toast').textContent=t;$('toast').style.display="block";clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').style.display="none",2200)}
 function fmt(n){return Number(n||0).toLocaleString("it-IT",{minimumFractionDigits:1,maximumFractionDigits:1})}
 
-/* NEXUS SQUADRE — feed ufficiale gratuito API-Football */
-const NEXUS_TEAMS_API="https://v3.football.api-sports.io";
-const NEXUS_TEAMS_LEAGUE=135,NEXUS_TEAMS_SEASON=2026;
-let nexusTeamsData=[],nexusTeamsFixtures=[],nexusTeamsSelectedFixture=null,nexusTeamsLastLoad=0;
-function nexusTeamsKey(){return localStorage.getItem("nexusApiFootballKey")||""}
+/* NEXUS SQUADRE — probabili formazioni settimanali SOS Fanta */
+let nexusTeamsData=null,nexusTeamsLastLoad=0;
 function nexusTeamsSetStatus(msg){const el=$("nexusTeamsStatus");if(el)el.textContent=msg}
-function nexusTeamsDate(v){if(!v)return "Data da definire";return new Date(v).toLocaleString("it-IT",{weekday:"short",day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"})}
-async function nexusTeamsRequest(path){
- const key=nexusTeamsKey();if(!key)throw new Error("Inserisci la chiave API gratuita per collegare la fonte.");
- const res=await fetch(NEXUS_TEAMS_API+path,{headers:{"x-apisports-key":key}});
- if(!res.ok)throw new Error("Fonte dati non raggiungibile (HTTP "+res.status+").");
- const json=await res.json();if(json.errors&&Object.keys(json.errors).length)throw new Error("La fonte ha segnalato: "+JSON.stringify(json.errors));
- return json.response||[];
-}
-function nexusTeamsDrawLineup(lineup,teamName){
- const pitch=$("nexusTeamsPitch");pitch.innerHTML='<svg viewBox="0 0 100 100" preserveAspectRatio="none"><g class="pitch-lines" fill="none"><rect x="5" y="2" width="90" height="96" rx="1"/><line x1="5" y1="50" x2="95" y2="50"/><circle cx="50" cy="50" r="10"/><rect x="25" y="2" width="50" height="15"/><rect x="25" y="83" width="50" height="15"/><rect x="39" y="2" width="22" height="6"/><rect x="39" y="92" width="22" height="6"/></g></svg>';
- const xi=(lineup.startXI||[]).map(x=>x.player).filter(Boolean);
- xi.forEach((p,i)=>{let row=String(p.grid||"").split(":").map(Number),x=row[1],y=row[0];if(!x||!y){x=(i%4)+1;y=Math.floor(i/4)+1}const el=document.createElement("div");el.className="nexus-team-player";el.style.left=(10+(Math.max(1,Math.min(5,x))-1)*20)+"%";el.style.top=(12+(Math.max(1,Math.min(5,y))-1)*18)+"%";el.innerHTML='<div class="shirt"></div><b></b><small></small>';el.querySelector("b").textContent=p.name||"Giocatore";el.querySelector("small").textContent=(p.number?"#"+p.number+" · ":"")+(p.pos||"");pitch.appendChild(el)});
+function nexusTeamsDrawLineup(teamName,team){
+ const pitch=$("nexusTeamsPitch");
+ pitch.innerHTML='<svg viewBox="0 0 100 100" preserveAspectRatio="none"><g class="pitch-lines" fill="none"><rect x="5" y="2" width="90" height="96" rx="1"/><line x1="5" y1="50" x2="95" y2="50"/><circle cx="50" cy="50" r="10"/><rect x="25" y="2" width="50" height="15"/><rect x="25" y="83" width="50" height="15"/><rect x="39" y="2" width="22" height="6"/><rect x="39" y="92" width="22" height="6"/></g></svg>';
+ const counts=(String(team.module||"4-3-3").match(/\d+/g)||[4,3,3]).map(Number);
+ const xi=team.starters||[];
+ const positions=[{x:50,y:88}];
+ let index=1;
+ counts.forEach((count,line)=>{
+  const y=70-line*19;
+  for(let i=0;i<count;i++){
+   const x=count===1?50:15+(70/(count-1))*i;
+   positions.push({x,y});index++;
+  }
+ });
+ xi.slice(0,11).forEach((p,i)=>{
+  const pos=positions[i]||{x:50,y:15};
+  const el=document.createElement("div");el.className="nexus-team-player";
+  el.style.left=pos.x+"%";el.style.top=pos.y+"%";
+  el.innerHTML='<div class="shirt"></div><b></b><small></small>';
+  el.querySelector("b").textContent=p.name||"Giocatore";
+  el.querySelector("small").textContent=p.probability==null?"TITOLARE":p.probability+"%";
+  pitch.appendChild(el);
+ });
  $("nexusTeamsFieldTitle").textContent=teamName.toUpperCase()+" · CAMPO TATTICO";
- $("nexusTeamsFormation").textContent=lineup.formation||"MODULO N/D";
+ $("nexusTeamsFormation").textContent=team.module||"MODULO N/D";
 }
-function nexusTeamsPopulateFixtures(teamId){const fixtureSelect=$("nexusFixtureSelect");fixtureSelect.innerHTML="";nexusTeamsFixtures.filter(f=>Number(f.teams.home.id)===Number(teamId)||Number(f.teams.away.id)===Number(teamId)).forEach(f=>{const o=document.createElement("option");o.value=f.fixture.id;o.textContent=f.teams.home.name+" – "+f.teams.away.name+" · "+nexusTeamsDate(f.fixture.date);fixtureSelect.appendChild(o)});}
-async function nexusTeamsLoadLineup(){
- const teamId=Number($("nexusTeamsSelect").value),fixtureId=Number($("nexusFixtureSelect").value);
- const fixture=nexusTeamsFixtures.find(x=>Number(x.fixture.id)===fixtureId);if(!fixture)return;
- nexusTeamsSelectedFixture=fixture;$("nexusTeamsMatchInfo").hidden=false;
- $("nexusTeamsMatchInfo").innerHTML="<strong>"+fixture.teams.home.name+" – "+fixture.teams.away.name+"</strong><p class='note'>"+nexusTeamsDate(fixture.fixture.date)+" · "+(fixture.fixture.venue?.name||"Stadio da confermare")+"</p>";
- $("nexusTeamsBench").hidden=true;nexusTeamsSetStatus("Controllo disponibilità della formazione ufficiale…");
+function nexusTeamsRender(teamName){
+ if(!nexusTeamsData||!nexusTeamsData.teams)return;
+ const team=nexusTeamsData.teams[teamName];if(!team)return;
+ $("nexusTeamsMatchInfo").hidden=false;
+ $("nexusTeamsMatchInfo").textContent=teamName+"  vs  "+(team.opponent||"Avversario da definire")+"  ·  "+(team.matchDate||"Data da definire");
+ nexusTeamsDrawLineup(teamName,team);
+ const bench=$("nexusTeamsBench"),list=$("nexusTeamsBenchList");
+ list.innerHTML="";
+ (team.bench||[]).forEach(p=>{
+  const el=document.createElement("div");el.className="nexus-bench-player";
+  const strong=document.createElement("strong");strong.textContent=p.name||"Giocatore";
+  const small=document.createElement("small");small.textContent=p.probability==null?"ALTERNATIVA":p.probability+"% · PROBABILITÀ";
+  el.append(strong,small);list.appendChild(el);
+ });
+ bench.hidden=!(team.bench||[]).length;
+ nexusTeamsSetStatus("PROBABILE FORMAZIONE · "+(team.matchDate||"prossima giornata")+" · fonte "+(nexusTeamsData.source||"SOS Fanta"));
+}
+async function nexusTeamsLoad(force=false){
+ if(nexusTeamsData&&!force&&Date.now()-nexusTeamsLastLoad<30*60*1000)return;
+ nexusTeamsSetStatus("Caricamento probabili formazioni…");
  try{
-  const rows=await nexusTeamsRequest("/fixtures/lineups?fixture="+fixtureId);
-  const lineup=rows.find(x=>Number(x.team.id)===teamId);
-  if(!lineup||!(lineup.startXI||[]).length){$("nexusTeamsPitch").innerHTML='<div class="nexus-teams-empty"><div>⌛</div><strong>Formazione non ancora pubblicata</strong><span>La fonte non ha ancora rilasciato l’undici ufficiale per questa partita.</span></div>';$("nexusTeamsFormation").textContent="IN ATTESA";nexusTeamsSetStatus("Ultimo controllo: "+new Date().toLocaleTimeString("it-IT")+" · riprova più vicino al calcio d'inizio.");return}
-  const team=nexusTeamsData.find(x=>Number(x.team.id)===teamId);nexusTeamsDrawLineup(lineup,team?.team.name||lineup.team.name);
-  const subs=(lineup.substitutes||[]).map(x=>x.player).filter(Boolean);$("nexusTeamsBench").hidden=false;$("nexusTeamsBenchList").innerHTML="";
-  subs.forEach(p=>{const el=document.createElement("div");el.className="nexus-bench-player";el.innerHTML="<strong></strong><small></small>";el.querySelector("strong").textContent=p.name||"Giocatore";el.querySelector("small").textContent=(p.number?"#"+p.number+" · ":"")+(p.pos||"");$("nexusTeamsBenchList").appendChild(el)});
-  nexusTeamsSetStatus("FORMAZIONE UFFICIALE · verificata "+new Date().toLocaleTimeString("it-IT"));
- }catch(e){nexusTeamsSetStatus(e.message);throw e}
+  const response=await fetch("formazioni.json?ts="+Date.now(),{cache:"no-store"});
+  if(!response.ok)throw new Error("Feed formazioni non disponibile (HTTP "+response.status+").");
+  const data=await response.json();
+  const names=Object.keys(data.teams||{});
+  if(names.length!==20)throw new Error("Il feed non contiene tutte le 20 squadre. Manteniamo l'ultima versione valida.");
+  if(names.some(n=>!Array.isArray(data.teams[n].starters)||data.teams[n].starters.length!==11||!Array.isArray(data.teams[n].bench)))throw new Error("Feed incompleto: riproveremo al prossimo aggiornamento.");
+  nexusTeamsData=data;nexusTeamsLastLoad=Date.now();
+  const select=$("nexusTeamsSelect"),previous=select.value;
+  select.innerHTML="";
+  names.sort((a,b)=>a.localeCompare(b,"it")).forEach(name=>{
+   const option=document.createElement("option");option.value=name;option.textContent=name;select.appendChild(option);
+  });
+  select.value=names.includes(previous)?previous:names[0];
+  const stamp=data.updatedAt?new Date(data.updatedAt):null;
+  $("nexusTeamsUpdated").textContent=stamp&&!Number.isNaN(stamp.getTime())?"Aggiornato il "+stamp.toLocaleString("it-IT",{day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"}):"Data aggiornamento non disponibile";
+  nexusTeamsRender(select.value);
+ }catch(e){
+  console.error("NEXUS probabili formazioni:",e);
+  nexusTeamsSetStatus(e.message||"Impossibile caricare le probabili formazioni.");
+  if(!nexusTeamsData)$("nexusTeamsPitch").innerHTML='<div class="nexus-teams-empty"><div>⌛</div><strong>Feed in preparazione</strong><span>Le formazioni saranno mostrate appena il primo aggiornamento sarà verificato.</span></div>';
+ }
 }
-async function nexusTeamsLoad(){
- const key=nexusTeamsKey();if(!key){$("nexusTeamsSetup").hidden=false;$("nexusTeamsControls").hidden=true;return}
- $("nexusTeamsSetup").hidden=true;$("nexusTeamsControls").hidden=false;nexusTeamsSetStatus("Caricamento club e prossime partite…");
- try{
-  const [teams,fixtures]=await Promise.all([nexusTeamsRequest("/teams?league="+NEXUS_TEAMS_LEAGUE+"&season="+NEXUS_TEAMS_SEASON),nexusTeamsRequest("/fixtures?league="+NEXUS_TEAMS_LEAGUE+"&season="+NEXUS_TEAMS_SEASON+"&next=20")]);
-  nexusTeamsData=teams;nexusTeamsFixtures=fixtures;nexusTeamsLastLoad=Date.now();
-  const select=$("nexusTeamsSelect");select.innerHTML="";
-  teams.sort((a,b)=>a.team.name.localeCompare(b.team.name,"it")).forEach(t=>{const o=document.createElement("option");o.value=t.team.id;o.textContent=t.team.name;select.appendChild(o)});
-  const fixtureSelect=$("nexusFixtureSelect");nexusTeamsPopulateFixtures(Number(select.value));
-  if(!teams.length||!fixtures.length)throw new Error("La fonte non ha restituito squadre o partite per la stagione 2026/27.");
-  const chosen=teams[0];select.value=chosen.team.id;
-  const first=fixtures.find(f=>Number(f.teams.home.id)===Number(chosen.team.id)||Number(f.teams.away.id)===Number(chosen.team.id))||fixtures[0];fixtureSelect.value=first.fixture.id;
-  $("nexusTeamsUpdated").textContent="Dati caricati "+new Date().toLocaleTimeString("it-IT");
-  await nexusTeamsLoadLineup();
- }catch(e){nexusTeamsSetStatus(e.message);$("nexusTeamsSetup").hidden=false;$("nexusTeamsControls").hidden=true;throw e}
-}
-$("nexusTeamsConnect").onclick=async()=>{const key=$("nexusTeamsApiKey").value.trim();if(!key){toast("Inserisci la chiave API gratuita");return}localStorage.setItem("nexusApiFootballKey",key);try{await nexusTeamsLoad();toast("Fonte dati collegata")}catch(e){console.error("NEXUS API-Football:",e);toast("Collegamento non riuscito: "+(e?.message||"errore sconosciuto"))}};
-$("nexusTeamsRefresh").onclick=async()=>{try{await nexusTeamsLoad();toast("Dati squadre aggiornati")}catch(e){toast("Aggiornamento non riuscito")}};
-$("nexusTeamsSelect").onchange=()=>{nexusTeamsPopulateFixtures(Number($("nexusTeamsSelect").value));nexusTeamsLoadLineup().catch(e=>console.warn(e))};
-$("nexusFixtureSelect").onchange=()=>nexusTeamsLoadLineup().catch(e=>console.warn(e));
-const savedTeamsKey=nexusTeamsKey();if(savedTeamsKey)$("nexusTeamsApiKey").value=savedTeamsKey;
-setInterval(()=>{if(document.getElementById("teams")?.classList.contains("active")&&nexusTeamsKey()&&nexusTeamsSelectedFixture)nexusTeamsLoadLineup().catch(e=>console.warn("NEXUS lineups refresh:",e))},15*60*1000);
-
-function screen(id){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===id));document.querySelectorAll(".navbtn").forEach(b=>b.classList.toggle("active",b.dataset.screen===id));window.scrollTo({top:0,behavior:"smooth"});if(id==="ratings")renderRatings();if(id==="market")renderMarket();if(id==="listone")renderListone();if(id==="teams"&&nexusTeamsKey()&&(!nexusTeamsData.length||Date.now()-nexusTeamsLastLoad>12*60*60*1000))nexusTeamsLoad().catch(e=>console.warn(e))}
+$("nexusTeamsSelect").onchange=()=>nexusTeamsRender($("nexusTeamsSelect").value);
+function screen(id){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===id));document.querySelectorAll(".navbtn").forEach(b=>b.classList.toggle("active",b.dataset.screen===id));window.scrollTo({top:0,behavior:"smooth"});if(id==="ratings")renderRatings();if(id==="market")renderMarket();if(id==="listone")renderListone();if(id==="teams"&&(!nexusTeamsData||Date.now()-nexusTeamsLastLoad>30*60*1000))nexusTeamsLoad().catch(e=>console.warn(e))}
 function currentTeam(){return $("teamSelect").value}
 function teamPlayers(team=currentTeam()){return players.filter(p=>Array.isArray(p.owners)&&p.owners.includes(team))}
 function roleCount(role,team=currentTeam()){return teamPlayers(team).filter(p=>p.role===role).length}
