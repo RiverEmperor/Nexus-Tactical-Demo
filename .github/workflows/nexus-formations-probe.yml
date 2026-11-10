@@ -24,17 +24,15 @@ jobs:
           r=requests.get(u,headers={"User-Agent":"Mozilla/5.0 NEXUS-Tactical/1.0"},timeout=30)
           print("HTTP",r.status_code,"bytes",len(r.content))
           r.raise_for_status()
-          s=BeautifulSoup(r.text,"html.parser")
-          for art in s.find_all("article"):\n              hs=[h for h in art.find_all("h2")]\n              if hs:\n                  print("ARTICLE", [h.get_text(" ",strip=True) for h in hs])\n                  for sec in art.find_all("section",recursive=False):\n                      h3=sec.find("h3")\n                      if h3:\n                          print("GROUP",h3.get_text(" ",strip=True), "ULS",[(len(u.find_all("li",recursive=False)), [x.get_text(" ",strip=True) for x in u.find_all("li",recursive=False)[:3]]) for u in sec.find_all("ul")])\n                  break\n          for h in s.find_all(["h2","h3"]):
-              name=" ".join(h.get_text(" ",strip=True).split())
-              if name in {"Titolari","Panchina","Ballottaggi","Indisponibili"}:
-                  p=h
-                  chain=[]
-                  for _ in range(5):
-                      if not p: break
-                      chain.append((p.name,p.get("class"),len(p.find_all("li",recursive=True)), " ".join(p.get_text(" ",strip=True).split())[:120]))
-                      p=p.parent
-                  print("SECTION",name,chain)
-              elif name and name not in {"Probabili Formazioni Serie A"}:
-                  print("TEAM",name, "parent",h.parent.name,h.parent.get("class"),"grand",h.parent.parent.name,h.parent.parent.get("class"))
+          soup=BeautifulSoup(r.text,"html.parser")
+          for art in soup.find_all("article"):
+              hs=[h for h in art.find_all("h2")]
+              if not hs: continue
+              print("ARTICLE", [h.get_text(" ",strip=True) for h in hs])
+              for sec in art.find_all("section"):
+                  h3=sec.find("h3",recursive=False)
+                  if h3:
+                      uls=sec.find_all("ul",recursive=False)
+                      print("GROUP",h3.get_text(" ",strip=True),"ULS",[(len(u.find_all("li",recursive=False)),[x.get_text(" ",strip=True) for x in u.find_all("li",recursive=False)[:3]]) for u in uls])
+              break
           PY
