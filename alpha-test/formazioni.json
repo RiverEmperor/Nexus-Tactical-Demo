@@ -1,0 +1,1951 @@
+{
+  "updatedAt": "2026-11-10T01:53:49+00:00",
+  "source": "SOS Fanta",
+  "sourceUrl": "https://www.sosfanta.com/lista-formazioni/probabili-formazioni-serie-a/",
+  "teams": {
+    "Atalanta": {
+      "module": "4-2-3-1",
+      "opponent": "Inter",
+      "matchDate": "22/11/2026 20:45",
+      "starters": [
+        {
+          "name": "Carnesecchi",
+          "probability": 95
+        },
+        {
+          "name": "Zappacosta",
+          "probability": 95
+        },
+        {
+          "name": "Scalvini",
+          "probability": 95
+        },
+        {
+          "name": "Kolasinac",
+          "probability": 95
+        },
+        {
+          "name": "Bernasconi",
+          "probability": 95
+        },
+        {
+          "name": "Kessiè",
+          "probability": 95
+        },
+        {
+          "name": "Ederson D.S.",
+          "probability": 95
+        },
+        {
+          "name": "Elmas",
+          "probability": 51
+        },
+        {
+          "name": "De Ketelaere",
+          "probability": 95
+        },
+        {
+          "name": "Zalewski",
+          "probability": 95
+        },
+        {
+          "name": "Krstovic",
+          "probability": 95
+        }
+      ],
+      "bench": [
+        {
+          "name": "Rowe",
+          "probability": 49
+        },
+        {
+          "name": "Sportiello",
+          "probability": 5
+        },
+        {
+          "name": "Obric",
+          "probability": 5
+        },
+        {
+          "name": "Pasalic",
+          "probability": 5
+        },
+        {
+          "name": "Samardzic",
+          "probability": 5
+        },
+        {
+          "name": "Scamacca",
+          "probability": 5
+        },
+        {
+          "name": "Sulemana K.",
+          "probability": 5
+        }
+      ]
+    },
+    "Bologna": {
+      "module": "3-4-3",
+      "opponent": "Udinese",
+      "matchDate": "22/11/2026 15:00",
+      "starters": [
+        {
+          "name": "Skorupski",
+          "probability": 95
+        },
+        {
+          "name": "Darmian",
+          "probability": 95
+        },
+        {
+          "name": "Casale",
+          "probability": 95
+        },
+        {
+          "name": "Theate",
+          "probability": 95
+        },
+        {
+          "name": "Zortea",
+          "probability": 95
+        },
+        {
+          "name": "Pobega",
+          "probability": 95
+        },
+        {
+          "name": "Ferguson",
+          "probability": 95
+        },
+        {
+          "name": "Alhassane",
+          "probability": 51
+        },
+        {
+          "name": "Orsolini",
+          "probability": 51
+        },
+        {
+          "name": "Odgaard",
+          "probability": 51
+        },
+        {
+          "name": "Cambiaghi",
+          "probability": 51
+        }
+      ],
+      "bench": [
+        {
+          "name": "Mbangula",
+          "probability": 49
+        },
+        {
+          "name": "Piccoli",
+          "probability": 49
+        },
+        {
+          "name": "Bernardeschi",
+          "probability": 49
+        },
+        {
+          "name": "Happonen",
+          "probability": 5
+        },
+        {
+          "name": "Pessina Mas.",
+          "probability": 5
+        },
+        {
+          "name": "Heggem",
+          "probability": 5
+        },
+        {
+          "name": "Helland",
+          "probability": 5
+        },
+        {
+          "name": "Vitik",
+          "probability": 5
+        },
+        {
+          "name": "Amondarain",
+          "probability": 5
+        },
+        {
+          "name": "El Azzouzi O.",
+          "probability": 5
+        },
+        {
+          "name": "Libra",
+          "probability": 5
+        },
+        {
+          "name": "Moro N.",
+          "probability": 5
+        },
+        {
+          "name": "Dovbyk",
+          "probability": 5
+        }
+      ]
+    },
+    "Cagliari": {
+      "module": "3-4-2-1",
+      "opponent": "Como",
+      "matchDate": "21/11/2026 15:00",
+      "starters": [
+        {
+          "name": "Caprile",
+          "probability": 95
+        },
+        {
+          "name": "Deiola",
+          "probability": 95
+        },
+        {
+          "name": "Kofler",
+          "probability": 95
+        },
+        {
+          "name": "Rodriguez Ju.",
+          "probability": 95
+        },
+        {
+          "name": "Zè Pedro",
+          "probability": 60
+        },
+        {
+          "name": "Adopo",
+          "probability": 95
+        },
+        {
+          "name": "Romano",
+          "probability": 95
+        },
+        {
+          "name": "Obert",
+          "probability": 95
+        },
+        {
+          "name": "Fazzini",
+          "probability": 51
+        },
+        {
+          "name": "Maldini",
+          "probability": 95
+        },
+        {
+          "name": "Mendy P.",
+          "probability": 60
+        }
+      ],
+      "bench": [
+        {
+          "name": "Kevin Carlos",
+          "probability": 40
+        },
+        {
+          "name": "Massolin",
+          "probability": 49
+        },
+        {
+          "name": "Sugawara",
+          "probability": 40
+        },
+        {
+          "name": "Radunovic",
+          "probability": 5
+        },
+        {
+          "name": "Sherri",
+          "probability": 5
+        },
+        {
+          "name": "Grandu",
+          "probability": 5
+        },
+        {
+          "name": "Ciervo",
+          "probability": 5
+        },
+        {
+          "name": "Gagliardini",
+          "probability": 5
+        },
+        {
+          "name": "Liteta",
+          "probability": 5
+        }
+      ]
+    },
+    "Como": {
+      "module": "4-2-3-1",
+      "opponent": "Cagliari",
+      "matchDate": "21/11/2026 15:00",
+      "starters": [
+        {
+          "name": "Butez",
+          "probability": 51
+        },
+        {
+          "name": "Couto",
+          "probability": 51
+        },
+        {
+          "name": "Kempf",
+          "probability": 95
+        },
+        {
+          "name": "Ramon",
+          "probability": 95
+        },
+        {
+          "name": "Kaiki",
+          "probability": 51
+        },
+        {
+          "name": "Perrone",
+          "probability": 95
+        },
+        {
+          "name": "Milla",
+          "probability": 95
+        },
+        {
+          "name": "Da Cunha",
+          "probability": 95
+        },
+        {
+          "name": "Paz N.",
+          "probability": 95
+        },
+        {
+          "name": "Baturina",
+          "probability": 60
+        },
+        {
+          "name": "Douvikas",
+          "probability": 95
+        }
+      ],
+      "bench": [
+        {
+          "name": "Smolcic I.",
+          "probability": 49
+        },
+        {
+          "name": "Caqueret",
+          "probability": 40
+        },
+        {
+          "name": "Sanchez Ro.",
+          "probability": 49
+        },
+        {
+          "name": "Valle",
+          "probability": 49
+        },
+        {
+          "name": "Vigorito",
+          "probability": 5
+        },
+        {
+          "name": "Goldaniga",
+          "probability": 5
+        },
+        {
+          "name": "Kambwala",
+          "probability": 5
+        },
+        {
+          "name": "Lahdo",
+          "probability": 5
+        },
+        {
+          "name": "Liberali",
+          "probability": 5
+        },
+        {
+          "name": "Ricci S.",
+          "probability": 5
+        }
+      ]
+    },
+    "Fiorentina": {
+      "module": "4-2-3-1",
+      "opponent": "Monza",
+      "matchDate": "23/11/2026 20:45",
+      "starters": [
+        {
+          "name": "De Gea",
+          "probability": 95
+        },
+        {
+          "name": "Jimenez A.",
+          "probability": 95
+        },
+        {
+          "name": "Dragusin",
+          "probability": 95
+        },
+        {
+          "name": "Viery",
+          "probability": 95
+        },
+        {
+          "name": "Joao Mario",
+          "probability": 95
+        },
+        {
+          "name": "Ndour",
+          "probability": 95
+        },
+        {
+          "name": "Oulai",
+          "probability": 51
+        },
+        {
+          "name": "Mastantuono",
+          "probability": 95
+        },
+        {
+          "name": "Goncalves P.",
+          "probability": 55
+        },
+        {
+          "name": "Njie",
+          "probability": 95
+        },
+        {
+          "name": "Pellegrino M.",
+          "probability": 95
+        }
+      ],
+      "bench": [
+        {
+          "name": "Fagioli",
+          "probability": 49
+        },
+        {
+          "name": "Brescianini",
+          "probability": 45
+        },
+        {
+          "name": "Christensen O.",
+          "probability": 5
+        },
+        {
+          "name": "Lezzerini",
+          "probability": 5
+        },
+        {
+          "name": "Dodò",
+          "probability": 5
+        },
+        {
+          "name": "Ranieri L.",
+          "probability": 5
+        },
+        {
+          "name": "Valdepenas",
+          "probability": 5
+        },
+        {
+          "name": "Beto",
+          "probability": 5
+        },
+        {
+          "name": "Gnonto",
+          "probability": 5
+        }
+      ]
+    },
+    "Frosinone": {
+      "module": "4-2-3-1",
+      "opponent": "Milan",
+      "matchDate": "22/11/2026 18:00",
+      "starters": [
+        {
+          "name": "Palmisani",
+          "probability": 95
+        },
+        {
+          "name": "Oyono A.",
+          "probability": 95
+        },
+        {
+          "name": "Calvani",
+          "probability": 95
+        },
+        {
+          "name": "Monterisi",
+          "probability": 51
+        },
+        {
+          "name": "Tchato",
+          "probability": 95
+        },
+        {
+          "name": "Calò",
+          "probability": 95
+        },
+        {
+          "name": "Masini",
+          "probability": 51
+        },
+        {
+          "name": "Ghedjemis",
+          "probability": 95
+        },
+        {
+          "name": "Schmid",
+          "probability": 95
+        },
+        {
+          "name": "Kvernadze",
+          "probability": 95
+        },
+        {
+          "name": "Birligea",
+          "probability": 51
+        }
+      ],
+      "bench": [
+        {
+          "name": "Cichella",
+          "probability": 49
+        },
+        {
+          "name": "Cittadini",
+          "probability": 49
+        },
+        {
+          "name": "Bobcek",
+          "probability": 49
+        },
+        {
+          "name": "Desplanches",
+          "probability": 5
+        },
+        {
+          "name": "Pisseri",
+          "probability": 5
+        },
+        {
+          "name": "Akpoguma",
+          "probability": 5
+        },
+        {
+          "name": "Amey",
+          "probability": 5
+        },
+        {
+          "name": "Omar Fayed",
+          "probability": 5
+        },
+        {
+          "name": "El Azzouzi A.",
+          "probability": 5
+        },
+        {
+          "name": "Fini",
+          "probability": 5
+        },
+        {
+          "name": "Hasa",
+          "probability": 5
+        },
+        {
+          "name": "Zerbin",
+          "probability": 5
+        }
+      ]
+    },
+    "Genoa": {
+      "module": "3-4-2-1",
+      "opponent": "Sassuolo",
+      "matchDate": "22/11/2026 15:00",
+      "starters": [
+        {
+          "name": "Bijlow",
+          "probability": 95
+        },
+        {
+          "name": "Marcandalli",
+          "probability": 95
+        },
+        {
+          "name": "Ostigard",
+          "probability": 95
+        },
+        {
+          "name": "Vasquez",
+          "probability": 95
+        },
+        {
+          "name": "Ehizibue",
+          "probability": 95
+        },
+        {
+          "name": "Traorè Hj.",
+          "probability": 51
+        },
+        {
+          "name": "Frendrup",
+          "probability": 51
+        },
+        {
+          "name": "Ellertsson",
+          "probability": 95
+        },
+        {
+          "name": "Vitinha O.",
+          "probability": 55
+        },
+        {
+          "name": "Messias",
+          "probability": 55
+        },
+        {
+          "name": "Osmajic",
+          "probability": 95
+        }
+      ],
+      "bench": [
+        {
+          "name": "Wiafe",
+          "probability": 49
+        },
+        {
+          "name": "Baldanzi",
+          "probability": 45
+        },
+        {
+          "name": "El Shaarawy",
+          "probability": 45
+        },
+        {
+          "name": "Sow",
+          "probability": 49
+        },
+        {
+          "name": "Sommariva",
+          "probability": 5
+        },
+        {
+          "name": "Stolz",
+          "probability": 5
+        },
+        {
+          "name": "Drameh",
+          "probability": 5
+        },
+        {
+          "name": "Mitaj",
+          "probability": 5
+        },
+        {
+          "name": "Otoa",
+          "probability": 5
+        },
+        {
+          "name": "Puczka",
+          "probability": 5
+        },
+        {
+          "name": "Sabelli",
+          "probability": 5
+        },
+        {
+          "name": "Amorim",
+          "probability": 5
+        },
+        {
+          "name": "Meichtry",
+          "probability": 5
+        },
+        {
+          "name": "Venturino",
+          "probability": 5
+        },
+        {
+          "name": "Colombo",
+          "probability": 5
+        },
+        {
+          "name": "Havel",
+          "probability": 5
+        }
+      ]
+    },
+    "Inter": {
+      "module": "3-5-2",
+      "opponent": "Atalanta",
+      "matchDate": "22/11/2026 20:45",
+      "starters": [
+        {
+          "name": "Martinez Jo.",
+          "probability": 60
+        },
+        {
+          "name": "Akanji",
+          "probability": 95
+        },
+        {
+          "name": "Bastoni",
+          "probability": 95
+        },
+        {
+          "name": "Carlos Augusto",
+          "probability": 51
+        },
+        {
+          "name": "Spence",
+          "probability": 55
+        },
+        {
+          "name": "Barella",
+          "probability": 95
+        },
+        {
+          "name": "Calhanoglu",
+          "probability": 95
+        },
+        {
+          "name": "Zielinski",
+          "probability": 55
+        },
+        {
+          "name": "Dimarco",
+          "probability": 95
+        },
+        {
+          "name": "Esposito F.P.",
+          "probability": 95
+        },
+        {
+          "name": "Thuram",
+          "probability": 95
+        }
+      ],
+      "bench": [
+        {
+          "name": "Mkhitaryan",
+          "probability": 45
+        },
+        {
+          "name": "Bisseck",
+          "probability": 49
+        },
+        {
+          "name": "Provedel",
+          "probability": 40
+        },
+        {
+          "name": "Diouf",
+          "probability": 45
+        },
+        {
+          "name": "Di Gennaro",
+          "probability": 5
+        },
+        {
+          "name": "Pavard",
+          "probability": 5
+        },
+        {
+          "name": "Stones",
+          "probability": 5
+        },
+        {
+          "name": "Jones C.",
+          "probability": 5
+        },
+        {
+          "name": "Stankovic A.",
+          "probability": 5
+        },
+        {
+          "name": "Sucic P.",
+          "probability": 5
+        }
+      ]
+    },
+    "Juventus": {
+      "module": "4-3-3",
+      "opponent": "Venezia",
+      "matchDate": "22/11/2026 12:30",
+      "starters": [
+        {
+          "name": "Vicario",
+          "probability": 95
+        },
+        {
+          "name": "Celik",
+          "probability": 95
+        },
+        {
+          "name": "Bremer",
+          "probability": 95
+        },
+        {
+          "name": "Lucumì",
+          "probability": 60
+        },
+        {
+          "name": "Cabal",
+          "probability": 95
+        },
+        {
+          "name": "Mckennie",
+          "probability": 95
+        },
+        {
+          "name": "Douglas Luiz",
+          "probability": 95
+        },
+        {
+          "name": "Koopmeiners",
+          "probability": 95
+        },
+        {
+          "name": "Kolo Muani",
+          "probability": 95
+        },
+        {
+          "name": "Woltemade",
+          "probability": 95
+        },
+        {
+          "name": "Alajbegovic",
+          "probability": 51
+        }
+      ],
+      "bench": [
+        {
+          "name": "Boga",
+          "probability": 49
+        },
+        {
+          "name": "Kelly L.",
+          "probability": 40
+        },
+        {
+          "name": "Neto",
+          "probability": 5
+        },
+        {
+          "name": "Pinsoglio",
+          "probability": 5
+        },
+        {
+          "name": "Gatti",
+          "probability": 5
+        },
+        {
+          "name": "Rugani",
+          "probability": 5
+        },
+        {
+          "name": "Sarr P.",
+          "probability": 5
+        },
+        {
+          "name": "Zhegrova",
+          "probability": 5
+        },
+        {
+          "name": "Ekhator",
+          "probability": 5
+        }
+      ]
+    },
+    "Lazio": {
+      "module": "4-3-3",
+      "opponent": "Lecce",
+      "matchDate": "21/11/2026 15:00",
+      "starters": [
+        {
+          "name": "Mandas",
+          "probability": 95
+        },
+        {
+          "name": "Floriani Mussolini",
+          "probability": 95
+        },
+        {
+          "name": "Leite",
+          "probability": 60
+        },
+        {
+          "name": "Provstgaard",
+          "probability": 95
+        },
+        {
+          "name": "Pedraza",
+          "probability": 60
+        },
+        {
+          "name": "Frattesi",
+          "probability": 95
+        },
+        {
+          "name": "Belahyane",
+          "probability": 95
+        },
+        {
+          "name": "Taylor K.",
+          "probability": 95
+        },
+        {
+          "name": "Isaksen",
+          "probability": 95
+        },
+        {
+          "name": "Pinamonti",
+          "probability": 60
+        },
+        {
+          "name": "Noslin",
+          "probability": 95
+        }
+      ],
+      "bench": [
+        {
+          "name": "Doekhi",
+          "probability": 40
+        },
+        {
+          "name": "Pellegrini Lu.",
+          "probability": 40
+        },
+        {
+          "name": "Cancellieri",
+          "probability": 40
+        },
+        {
+          "name": "Motta",
+          "probability": 5
+        },
+        {
+          "name": "Renzetti",
+          "probability": 5
+        },
+        {
+          "name": "Lazzari",
+          "probability": 5
+        },
+        {
+          "name": "Marusic",
+          "probability": 5
+        },
+        {
+          "name": "Cataldi",
+          "probability": 5
+        },
+        {
+          "name": "Dele-Bashiru",
+          "probability": 5
+        },
+        {
+          "name": "Przyborek",
+          "probability": 5
+        },
+        {
+          "name": "Rovella",
+          "probability": 5
+        }
+      ]
+    },
+    "Lecce": {
+      "module": "3-5-1-1",
+      "opponent": "Lazio",
+      "matchDate": "21/11/2026 15:00",
+      "starters": [
+        {
+          "name": "Falcone",
+          "probability": 95
+        },
+        {
+          "name": "Tiago Gabriel",
+          "probability": 95
+        },
+        {
+          "name": "Gaspar K.",
+          "probability": 95
+        },
+        {
+          "name": "Dembelè A.",
+          "probability": 51
+        },
+        {
+          "name": "Veiga D.",
+          "probability": 95
+        },
+        {
+          "name": "Coulibaly L.",
+          "probability": 95
+        },
+        {
+          "name": "Ngom",
+          "probability": 95
+        },
+        {
+          "name": "Maleh",
+          "probability": 95
+        },
+        {
+          "name": "Gallo",
+          "probability": 95
+        },
+        {
+          "name": "Fatah",
+          "probability": 51
+        },
+        {
+          "name": "Geubbels",
+          "probability": 55
+        }
+      ],
+      "bench": [
+        {
+          "name": "Stulic",
+          "probability": 45
+        },
+        {
+          "name": "N'Dri",
+          "probability": 49
+        },
+        {
+          "name": "Siebert",
+          "probability": 49
+        },
+        {
+          "name": "Bleve",
+          "probability": 5
+        },
+        {
+          "name": "Jean",
+          "probability": 5
+        },
+        {
+          "name": "Ndaba",
+          "probability": 5
+        },
+        {
+          "name": "Fofana Sa.",
+          "probability": 5
+        },
+        {
+          "name": "Gandelman",
+          "probability": 5
+        },
+        {
+          "name": "Gorter",
+          "probability": 5
+        },
+        {
+          "name": "Kaba",
+          "probability": 5
+        },
+        {
+          "name": "Esteban",
+          "probability": 5
+        }
+      ]
+    },
+    "Milan": {
+      "module": "3-4-2-1",
+      "opponent": "Frosinone",
+      "matchDate": "22/11/2026 18:00",
+      "starters": [
+        {
+          "name": "Maignan",
+          "probability": 95
+        },
+        {
+          "name": "Gila",
+          "probability": 95
+        },
+        {
+          "name": "De Winter",
+          "probability": 95
+        },
+        {
+          "name": "Diawara S.",
+          "probability": 60
+        },
+        {
+          "name": "Moreira",
+          "probability": 95
+        },
+        {
+          "name": "Modric",
+          "probability": 95
+        },
+        {
+          "name": "Rabiot",
+          "probability": 95
+        },
+        {
+          "name": "Musah",
+          "probability": 95
+        },
+        {
+          "name": "Cissè A.",
+          "probability": 60
+        },
+        {
+          "name": "Pulisic",
+          "probability": 95
+        },
+        {
+          "name": "Ramos G.",
+          "probability": 95
+        }
+      ],
+      "bench": [
+        {
+          "name": "Hutchinson",
+          "probability": 40
+        },
+        {
+          "name": "Terracciano F.",
+          "probability": 40
+        },
+        {
+          "name": "Torriani",
+          "probability": 5
+        },
+        {
+          "name": "Bartesaghi",
+          "probability": 5
+        },
+        {
+          "name": "Estupinan",
+          "probability": 5
+        },
+        {
+          "name": "Comotto",
+          "probability": 5
+        },
+        {
+          "name": "Jashari",
+          "probability": 5
+        },
+        {
+          "name": "Camarda",
+          "probability": 5
+        }
+      ]
+    },
+    "Monza": {
+      "module": "3-4-2-1",
+      "opponent": "Fiorentina",
+      "matchDate": "23/11/2026 20:45",
+      "starters": [
+        {
+          "name": "Tornqvist",
+          "probability": 95
+        },
+        {
+          "name": "Kouadio",
+          "probability": 95
+        },
+        {
+          "name": "Goglichidze",
+          "probability": 95
+        },
+        {
+          "name": "Lucchesi",
+          "probability": 95
+        },
+        {
+          "name": "Tourè I.",
+          "probability": 51
+        },
+        {
+          "name": "Akinsanmiro",
+          "probability": 95
+        },
+        {
+          "name": "Pessina",
+          "probability": 51
+        },
+        {
+          "name": "Mangas",
+          "probability": 95
+        },
+        {
+          "name": "Robinson J.",
+          "probability": 60
+        },
+        {
+          "name": "Mota",
+          "probability": 60
+        },
+        {
+          "name": "Varela G.",
+          "probability": 95
+        }
+      ],
+      "bench": [
+        {
+          "name": "Birindelli",
+          "probability": 49
+        },
+        {
+          "name": "Zeballos",
+          "probability": 40
+        },
+        {
+          "name": "Ngonge",
+          "probability": 40
+        },
+        {
+          "name": "Colombo L.",
+          "probability": 49
+        },
+        {
+          "name": "Strajnar",
+          "probability": 5
+        },
+        {
+          "name": "Thiam",
+          "probability": 5
+        },
+        {
+          "name": "Antov",
+          "probability": 5
+        },
+        {
+          "name": "Bakoune",
+          "probability": 5
+        },
+        {
+          "name": "Carboni A.",
+          "probability": 5
+        },
+        {
+          "name": "Ziolkowski",
+          "probability": 5
+        },
+        {
+          "name": "Ciurria",
+          "probability": 5
+        },
+        {
+          "name": "Colpani",
+          "probability": 5
+        },
+        {
+          "name": "Foe Ondoa",
+          "probability": 5
+        },
+        {
+          "name": "Forson O.",
+          "probability": 5
+        },
+        {
+          "name": "Mout",
+          "probability": 5
+        },
+        {
+          "name": "Cutrone",
+          "probability": 5
+        }
+      ]
+    },
+    "Napoli": {
+      "module": "3-5-2",
+      "opponent": "Torino",
+      "matchDate": "21/11/2026 20:45",
+      "starters": [
+        {
+          "name": "Meret",
+          "probability": 51
+        },
+        {
+          "name": "Beukema",
+          "probability": 95
+        },
+        {
+          "name": "Rrahmani",
+          "probability": 95
+        },
+        {
+          "name": "Marin R.",
+          "probability": 95
+        },
+        {
+          "name": "Politano",
+          "probability": 51
+        },
+        {
+          "name": "De Bruyne",
+          "probability": 95
+        },
+        {
+          "name": "Gilmour",
+          "probability": 55
+        },
+        {
+          "name": "Mctominay",
+          "probability": 95
+        },
+        {
+          "name": "Olivera",
+          "probability": 95
+        },
+        {
+          "name": "Lang",
+          "probability": 95
+        },
+        {
+          "name": "Hojlund",
+          "probability": 95
+        }
+      ],
+      "bench": [
+        {
+          "name": "Vergara",
+          "probability": 49
+        },
+        {
+          "name": "Zambo Anguissa",
+          "probability": 45
+        },
+        {
+          "name": "Milinkovic-Savic V.",
+          "probability": 49
+        },
+        {
+          "name": "Contini",
+          "probability": 5
+        },
+        {
+          "name": "Marianucci",
+          "probability": 5
+        },
+        {
+          "name": "Giovane",
+          "probability": 5
+        },
+        {
+          "name": "Lucca",
+          "probability": 5
+        }
+      ]
+    },
+    "Parma": {
+      "module": "3-5-2",
+      "opponent": "Roma",
+      "matchDate": "21/11/2026 18:00",
+      "starters": [
+        {
+          "name": "Daffara",
+          "probability": 95
+        },
+        {
+          "name": "Delprato",
+          "probability": 95
+        },
+        {
+          "name": "Troilo",
+          "probability": 95
+        },
+        {
+          "name": "Diego Carlos",
+          "probability": 95
+        },
+        {
+          "name": "Britschgi",
+          "probability": 51
+        },
+        {
+          "name": "Keita M.",
+          "probability": 95
+        },
+        {
+          "name": "Sierro",
+          "probability": 95
+        },
+        {
+          "name": "Fabbian",
+          "probability": 95
+        },
+        {
+          "name": "Valeri",
+          "probability": 95
+        },
+        {
+          "name": "Lontani",
+          "probability": 95
+        },
+        {
+          "name": "Tourè E.",
+          "probability": 51
+        }
+      ],
+      "bench": [
+        {
+          "name": "Elphege",
+          "probability": 49
+        },
+        {
+          "name": "Cremaschi",
+          "probability": 49
+        },
+        {
+          "name": "Corvi",
+          "probability": 5
+        },
+        {
+          "name": "Ghidotti",
+          "probability": 5
+        },
+        {
+          "name": "Carboni F.",
+          "probability": 5
+        },
+        {
+          "name": "Almqvist",
+          "probability": 5
+        },
+        {
+          "name": "Diallo O.",
+          "probability": 5
+        },
+        {
+          "name": "Konaté A.",
+          "probability": 5
+        },
+        {
+          "name": "Nicolussi Caviglia",
+          "probability": 5
+        },
+        {
+          "name": "Ordonez C.",
+          "probability": 5
+        },
+        {
+          "name": "Frigan",
+          "probability": 5
+        }
+      ]
+    },
+    "Roma": {
+      "module": "3-4-2-1",
+      "opponent": "Parma",
+      "matchDate": "21/11/2026 18:00",
+      "starters": [
+        {
+          "name": "Gollini",
+          "probability": 95
+        },
+        {
+          "name": "Balerdi",
+          "probability": 55
+        },
+        {
+          "name": "N'Dicka",
+          "probability": 95
+        },
+        {
+          "name": "Hermoso",
+          "probability": 95
+        },
+        {
+          "name": "Molina N.",
+          "probability": 51
+        },
+        {
+          "name": "Konè M.",
+          "probability": 95
+        },
+        {
+          "name": "Cristante",
+          "probability": 95
+        },
+        {
+          "name": "Wesley",
+          "probability": 95
+        },
+        {
+          "name": "Soulè",
+          "probability": 95
+        },
+        {
+          "name": "Mora",
+          "probability": 60
+        },
+        {
+          "name": "Malen",
+          "probability": 95
+        }
+      ],
+      "bench": [
+        {
+          "name": "Lulli",
+          "probability": 49
+        },
+        {
+          "name": "Ghilardi",
+          "probability": 45
+        },
+        {
+          "name": "Pisilli",
+          "probability": 40
+        },
+        {
+          "name": "De Marzi",
+          "probability": 5
+        },
+        {
+          "name": "Vasquez D.",
+          "probability": 5
+        },
+        {
+          "name": "Koulierakis",
+          "probability": 5
+        },
+        {
+          "name": "De Roon",
+          "probability": 5
+        },
+        {
+          "name": "Castro S.",
+          "probability": 5
+        }
+      ]
+    },
+    "Sassuolo": {
+      "module": "3-5-2",
+      "opponent": "Genoa",
+      "matchDate": "22/11/2026 15:00",
+      "starters": [
+        {
+          "name": "Muric",
+          "probability": 95
+        },
+        {
+          "name": "Walukiewicz",
+          "probability": 95
+        },
+        {
+          "name": "Idzes",
+          "probability": 95
+        },
+        {
+          "name": "Caleta-Car",
+          "probability": 51
+        },
+        {
+          "name": "Cinquegrano",
+          "probability": 51
+        },
+        {
+          "name": "Bakola",
+          "probability": 51
+        },
+        {
+          "name": "Matic",
+          "probability": 95
+        },
+        {
+          "name": "Thorstvedt",
+          "probability": 51
+        },
+        {
+          "name": "Doig",
+          "probability": 95
+        },
+        {
+          "name": "Esposito Se.",
+          "probability": 60
+        },
+        {
+          "name": "Laurientè",
+          "probability": 95
+        }
+      ],
+      "bench": [
+        {
+          "name": "Bowie",
+          "probability": 40
+        },
+        {
+          "name": "Adzic",
+          "probability": 49
+        },
+        {
+          "name": "Van Der Brempt",
+          "probability": 49
+        },
+        {
+          "name": "Candè",
+          "probability": 49
+        },
+        {
+          "name": "Satalino",
+          "probability": 5
+        },
+        {
+          "name": "Turati",
+          "probability": 5
+        },
+        {
+          "name": "Obrador",
+          "probability": 5
+        },
+        {
+          "name": "Odenthal",
+          "probability": 5
+        },
+        {
+          "name": "Pieragnolo",
+          "probability": 5
+        },
+        {
+          "name": "Dominguez B.",
+          "probability": 5
+        },
+        {
+          "name": "Lipani",
+          "probability": 5
+        },
+        {
+          "name": "Sulemana I.",
+          "probability": 5
+        }
+      ]
+    },
+    "Torino": {
+      "module": "3-4-1-2",
+      "opponent": "Napoli",
+      "matchDate": "21/11/2026 20:45",
+      "starters": [
+        {
+          "name": "Perri",
+          "probability": 95
+        },
+        {
+          "name": "Coco",
+          "probability": 95
+        },
+        {
+          "name": "Ismajli",
+          "probability": 95
+        },
+        {
+          "name": "Comuzzo",
+          "probability": 95
+        },
+        {
+          "name": "Belghali",
+          "probability": 95
+        },
+        {
+          "name": "Fitz-Jim",
+          "probability": 51
+        },
+        {
+          "name": "Mandragora",
+          "probability": 95
+        },
+        {
+          "name": "Cacciamani",
+          "probability": 95
+        },
+        {
+          "name": "Vlasic",
+          "probability": 95
+        },
+        {
+          "name": "Adams C.",
+          "probability": 55
+        },
+        {
+          "name": "Simeone",
+          "probability": 95
+        }
+      ],
+      "bench": [
+        {
+          "name": "Kulenovic",
+          "probability": 45
+        },
+        {
+          "name": "Braganca",
+          "probability": 49
+        },
+        {
+          "name": "Mascardi",
+          "probability": 5
+        },
+        {
+          "name": "Siviero",
+          "probability": 5
+        },
+        {
+          "name": "Biraghi",
+          "probability": 5
+        },
+        {
+          "name": "Comert",
+          "probability": 5
+        },
+        {
+          "name": "Patterson",
+          "probability": 5
+        },
+        {
+          "name": "Aboukhlal",
+          "probability": 5
+        },
+        {
+          "name": "Casadei",
+          "probability": 5
+        },
+        {
+          "name": "Gineitis",
+          "probability": 5
+        },
+        {
+          "name": "Ilkhan",
+          "probability": 5
+        },
+        {
+          "name": "Oristanio",
+          "probability": 5
+        },
+        {
+          "name": "Zapata D.",
+          "probability": 5
+        }
+      ]
+    },
+    "Udinese": {
+      "module": "3-4-2-1",
+      "opponent": "Bologna",
+      "matchDate": "22/11/2026 15:00",
+      "starters": [
+        {
+          "name": "Okoye",
+          "probability": 95
+        },
+        {
+          "name": "Abankwah",
+          "probability": 60
+        },
+        {
+          "name": "Palma",
+          "probability": 95
+        },
+        {
+          "name": "Solet",
+          "probability": 95
+        },
+        {
+          "name": "Vojvoda",
+          "probability": 95
+        },
+        {
+          "name": "Piotrowski",
+          "probability": 51
+        },
+        {
+          "name": "Karlstrom",
+          "probability": 95
+        },
+        {
+          "name": "Kamara H.",
+          "probability": 95
+        },
+        {
+          "name": "Zaniolo",
+          "probability": 95
+        },
+        {
+          "name": "Ekkelenkamp",
+          "probability": 95
+        },
+        {
+          "name": "Davis K.",
+          "probability": 95
+        }
+      ],
+      "bench": [
+        {
+          "name": "Chakvetadze",
+          "probability": 49
+        },
+        {
+          "name": "Kabasele",
+          "probability": 40
+        },
+        {
+          "name": "Mrozek",
+          "probability": 5
+        },
+        {
+          "name": "Padelli",
+          "probability": 5
+        },
+        {
+          "name": "Arizala",
+          "probability": 5
+        },
+        {
+          "name": "Bertola",
+          "probability": 5
+        },
+        {
+          "name": "Ebosse",
+          "probability": 5
+        },
+        {
+          "name": "Jovanovic",
+          "probability": 5
+        },
+        {
+          "name": "Lovric",
+          "probability": 5
+        },
+        {
+          "name": "Miller L.",
+          "probability": 5
+        },
+        {
+          "name": "Unai Gomez",
+          "probability": 5
+        },
+        {
+          "name": "Zarraga",
+          "probability": 5
+        },
+        {
+          "name": "Bayo V.",
+          "probability": 5
+        }
+      ]
+    },
+    "Venezia": {
+      "module": "3-5-2",
+      "opponent": "Juventus",
+      "matchDate": "22/11/2026 12:30",
+      "starters": [
+        {
+          "name": "Stankovic F.",
+          "probability": 95
+        },
+        {
+          "name": "Halhal",
+          "probability": 95
+        },
+        {
+          "name": "Moreno M.",
+          "probability": 95
+        },
+        {
+          "name": "Juan Jesus",
+          "probability": 95
+        },
+        {
+          "name": "Hainaut",
+          "probability": 95
+        },
+        {
+          "name": "Perez K.",
+          "probability": 95
+        },
+        {
+          "name": "Basic",
+          "probability": 51
+        },
+        {
+          "name": "Sohm",
+          "probability": 95
+        },
+        {
+          "name": "Mazzocchi",
+          "probability": 51
+        },
+        {
+          "name": "Yeboah J.",
+          "probability": 60
+        },
+        {
+          "name": "Adams A.",
+          "probability": 95
+        }
+      ],
+      "bench": [
+        {
+          "name": "Haps",
+          "probability": 49
+        },
+        {
+          "name": "Lauberbach",
+          "probability": 40
+        },
+        {
+          "name": "Busio",
+          "probability": 49
+        },
+        {
+          "name": "Grandi",
+          "probability": 5
+        },
+        {
+          "name": "Montipò",
+          "probability": 5
+        },
+        {
+          "name": "Bella-Kotchap",
+          "probability": 5
+        },
+        {
+          "name": "Correia T.",
+          "probability": 5
+        },
+        {
+          "name": "Gomes",
+          "probability": 5
+        },
+        {
+          "name": "Sagrado",
+          "probability": 5
+        },
+        {
+          "name": "Schingtienne",
+          "probability": 5
+        },
+        {
+          "name": "Dagasso",
+          "probability": 5
+        },
+        {
+          "name": "Duncan",
+          "probability": 5
+        },
+        {
+          "name": "Fernandez T.",
+          "probability": 5
+        },
+        {
+          "name": "Helgason",
+          "probability": 5
+        },
+        {
+          "name": "Lisman",
+          "probability": 5
+        },
+        {
+          "name": "Rrahmani Al.",
+          "probability": 5
+        }
+      ]
+    }
+  }
+}
