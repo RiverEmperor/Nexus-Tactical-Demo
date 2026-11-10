@@ -1,0 +1,40 @@
+name: NEXUS formations source probe
+on:
+  push:
+    paths:
+      - ".github/workflows/nexus-formations-probe.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - run: pip install requests beautifulsoup4
+      - name: Inspect public SOS Fanta page structure
+        run: |
+          python - <<'PY'
+          import requests
+          from bs4 import BeautifulSoup
+          u="https://www.sosfanta.com/lista-formazioni/probabili-formazioni-serie-a/"
+          r=requests.get(u,headers={"User-Agent":"Mozilla/5.0 NEXUS-Tactical/1.0"},timeout=30)
+          print("HTTP",r.status_code,"bytes",len(r.content))
+          r.raise_for_status()
+          s=BeautifulSoup(r.text,"html.parser")
+          for h in s.find_all(["h2","h3"]):
+              name=" ".join(h.get_text(" ",strip=True).split())
+              if name in {"Titolari","Panchina","Ballottaggi","Indisponibili"}:
+                  p=h
+                  chain=[]
+                  for _ in range(5):
+                      if not p: break
+                      chain.append((p.name,p.get("class"),len(p.find_all("li",recursive=True)), " ".join(p.get_text(" ",strip=True).split())[:120]))
+                      p=p.parent
+                  print("SECTION",name,chain)
+              elif name and name not in {"Probabili Formazioni Serie A"}:
+                  print("TEAM",name, "parent",h.parent.name,h.parent.get("class"),"grand",h.parent.parent.name,h.parent.parent.get("class"))
+          PY
