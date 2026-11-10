@@ -339,7 +339,7 @@ async function nexusTeamsLoad(){
   await nexusTeamsLoadLineup();
  }catch(e){nexusTeamsSetStatus(e.message);$("nexusTeamsSetup").hidden=false;$("nexusTeamsControls").hidden=true;throw e}
 }
-$("nexusTeamsConnect").onclick=async()=>{const key=$("nexusTeamsApiKey").value.trim();if(!key){toast("Inserisci la chiave API gratuita");return}localStorage.setItem("nexusApiFootballKey",key);try{await nexusTeamsLoad();toast("Fonte dati collegata")}catch(e){toast("Collegamento non riuscito: verifica la chiave")}};
+$("nexusTeamsConnect").onclick=async()=>{const key=$("nexusTeamsApiKey").value.trim();if(!key){toast("Inserisci la chiave API gratuita");return}localStorage.setItem("nexusApiFootballKey",key);try{await nexusTeamsLoad();toast("Fonte dati collegata")}catch(e){console.error("NEXUS API-Football:",e);toast("Collegamento non riuscito: "+(e?.message||"errore sconosciuto"))}};
 $("nexusTeamsRefresh").onclick=async()=>{try{await nexusTeamsLoad();toast("Dati squadre aggiornati")}catch(e){toast("Aggiornamento non riuscito")}};
 $("nexusTeamsSelect").onchange=()=>{nexusTeamsPopulateFixtures(Number($("nexusTeamsSelect").value));nexusTeamsLoadLineup().catch(e=>console.warn(e))};
 $("nexusFixtureSelect").onchange=()=>nexusTeamsLoadLineup().catch(e=>console.warn(e));
