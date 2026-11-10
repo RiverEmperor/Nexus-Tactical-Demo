@@ -265,8 +265,10 @@ function setSlotPlayer(slot,id){
  const ta=teamAssignments(),target=String(slot);
  if(id===null||id===undefined||id===""){delete ta[target];return}
  const selected=String(id);
+ const requiredRole=target.startsWith("B-")?target.split("-")[1]:expectedRole(Number(target));
+ if(!ROSTER_LIMITS[requiredRole])return false;
  const player=players.find(p=>String(p.id)===selected&&Array.isArray(p.owners)&&p.owners.includes(currentTeam()));
- if(!player||player.role!==expectedRole(Number(target)))return false;
+ if(!player||player.role!==requiredRole)return false;
  const existingKey=Object.keys(ta).find(k=>String(k)!==target&&String(ta[k])===selected);
  if(existingKey){
   const outgoing=ta[target];
@@ -379,7 +381,7 @@ function openBenchAssign(key){
     else{
      const chosen=players.find(p=>String(p.id)===String(id)&&Array.isArray(p.owners)&&p.owners.includes(team));
      if(!chosen||chosen.role!==role){toast("Selezione non valida: scegli una riserva dello stesso ruolo");return false}
-     setSlotPlayer(key,chosen.id);
+     if(!setSlotPlayer(key,chosen.id)){toast("Impossibile assegnare il calciatore a questo slot");return false;}
     }
    }else{
     const selectedId=$("benchListone").value;
@@ -405,7 +407,7 @@ function openBenchAssign(key){
     }
     if(!ratings[player.listoneId])ratings[player.listoneId]={mine:6.5,partner:6};
     if(replaceId!==null)removePlayerFromTeam(replaceId,team);
-    setSlotPlayer(key,player.id);
+    if(!setSlotPlayer(key,player.id)){players=before.players;ratings=before.ratings;assignments=before.assignments;toast("Assegnazione non valida: nessuna modifica salvata");return false;}
    }
    if(!persist()){
     players=before.players;ratings=before.ratings;assignments=before.assignments;
