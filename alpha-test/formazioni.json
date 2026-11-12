@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T01:53:49+00:00",
+  "updatedAt": "2026-11-12T08:55:13+00:00",
   "source": "SOS Fanta",
   "sourceUrl": "https://www.sosfanta.com/lista-formazioni/probabili-formazioni-serie-a/",
   "teams": {
@@ -265,6 +265,10 @@
           "probability": 5
         },
         {
+          "name": "Idrissi R.",
+          "probability": 5
+        },
+        {
           "name": "Ciervo",
           "probability": 5
         },
@@ -397,12 +401,12 @@
           "probability": 95
         },
         {
-          "name": "Ndour",
+          "name": "Fagioli",
           "probability": 95
         },
         {
           "name": "Oulai",
-          "probability": 51
+          "probability": 95
         },
         {
           "name": "Mastantuono",
@@ -422,10 +426,6 @@
         }
       ],
       "bench": [
-        {
-          "name": "Fagioli",
-          "probability": 49
-        },
         {
           "name": "Brescianini",
           "probability": 45
@@ -474,12 +474,12 @@
           "probability": 95
         },
         {
-          "name": "Calvani",
+          "name": "Cittadini",
           "probability": 95
         },
         {
           "name": "Monterisi",
-          "probability": 51
+          "probability": 95
         },
         {
           "name": "Tchato",
@@ -491,7 +491,7 @@
         },
         {
           "name": "Masini",
-          "probability": 51
+          "probability": 95
         },
         {
           "name": "Ghedjemis",
@@ -511,14 +511,6 @@
         }
       ],
       "bench": [
-        {
-          "name": "Cichella",
-          "probability": 49
-        },
-        {
-          "name": "Cittadini",
-          "probability": 49
-        },
         {
           "name": "Bobcek",
           "probability": 49
@@ -591,8 +583,8 @@
           "probability": 51
         },
         {
-          "name": "Frendrup",
-          "probability": 51
+          "name": "Wiafe",
+          "probability": 55
         },
         {
           "name": "Ellertsson",
@@ -613,10 +605,6 @@
       ],
       "bench": [
         {
-          "name": "Wiafe",
-          "probability": 49
-        },
-        {
           "name": "Baldanzi",
           "probability": 45
         },
@@ -626,6 +614,10 @@
         },
         {
           "name": "Sow",
+          "probability": 49
+        },
+        {
+          "name": "Meichtry",
           "probability": 49
         },
         {
@@ -658,10 +650,6 @@
         },
         {
           "name": "Amorim",
-          "probability": 5
-        },
-        {
-          "name": "Meichtry",
           "probability": 5
         },
         {
@@ -724,7 +712,7 @@
           "probability": 95
         },
         {
-          "name": "Thuram",
+          "name": "Martinez L.",
           "probability": 95
         }
       ],
@@ -759,10 +747,6 @@
         },
         {
           "name": "Jones C.",
-          "probability": 5
-        },
-        {
-          "name": "Stankovic A.",
           "probability": 5
         },
         {
@@ -829,6 +813,10 @@
         {
           "name": "Kelly L.",
           "probability": 40
+        },
+        {
+          "name": "Conceicao",
+          "probability": 5
         },
         {
           "name": "Neto",
@@ -1030,6 +1018,10 @@
         },
         {
           "name": "Ndaba",
+          "probability": 5
+        },
+        {
+          "name": "Berisha M.",
           "probability": 5
         },
         {
@@ -1510,17 +1502,25 @@
           "probability": 5
         },
         {
+          "name": "Mancini",
+          "probability": 5
+        },
+        {
           "name": "De Roon",
           "probability": 5
         },
         {
           "name": "Castro S.",
           "probability": 5
+        },
+        {
+          "name": "Dybala",
+          "probability": 5
         }
       ]
     },
     "Sassuolo": {
-      "module": "3-5-2",
+      "module": "4-3-3",
       "opponent": "Genoa",
       "matchDate": "22/11/2026 15:00",
       "starters": [
@@ -1529,20 +1529,20 @@
           "probability": 95
         },
         {
-          "name": "Walukiewicz",
-          "probability": 95
+          "name": "Cinquegrano",
+          "probability": 51
         },
         {
           "name": "Idzes",
           "probability": 95
         },
         {
-          "name": "Caleta-Car",
+          "name": "Candè",
           "probability": 51
         },
         {
-          "name": "Cinquegrano",
-          "probability": 51
+          "name": "Doig",
+          "probability": 95
         },
         {
           "name": "Bakola",
@@ -1557,12 +1557,12 @@
           "probability": 51
         },
         {
-          "name": "Doig",
+          "name": "Esposito Se.",
           "probability": 95
         },
         {
-          "name": "Esposito Se.",
-          "probability": 60
+          "name": "Bowie",
+          "probability": 95
         },
         {
           "name": "Laurientè",
@@ -1570,10 +1570,6 @@
         }
       ],
       "bench": [
-        {
-          "name": "Bowie",
-          "probability": 40
-        },
         {
           "name": "Adzic",
           "probability": 49
@@ -1583,7 +1579,7 @@
           "probability": 49
         },
         {
-          "name": "Candè",
+          "name": "Caleta-Car",
           "probability": 49
         },
         {
@@ -1604,6 +1600,10 @@
         },
         {
           "name": "Pieragnolo",
+          "probability": 5
+        },
+        {
+          "name": "Walukiewicz",
           "probability": 5
         },
         {
